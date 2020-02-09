@@ -14,6 +14,9 @@
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
 		8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D46023F043390012A1FC /* LaunchScreen.storyboard */; };
 		8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D46C23F043390012A1FC /* DeezerFunTests.swift */; };
+		8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */; };
+		8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */; };
+		8D83D48323F07B880012A1FC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48223F07B880012A1FC /* Artist.swift */; };
 		8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */; };
 		8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48723F0BE910012A1FC /* DeezerApiError.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		8D83D46823F043390012A1FC /* DeezerFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D46C23F043390012A1FC /* DeezerFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerFunTests.swift; sourceTree = "<group>"; };
 		8D83D46E23F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiSearchArtist.swift; sourceTree = "<group>"; };
+		8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiArtist.swift; sourceTree = "<group>"; };
+		8D83D48223F07B880012A1FC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerNativeError.swift; sourceTree = "<group>"; };
 		8D83D48723F0BE910012A1FC /* DeezerApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,12 +118,31 @@
 			path = "App Start";
 			sourceTree = "<group>";
 		};
+		8D83D47823F0776B0012A1FC /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47C23F079CD0012A1FC /* Models */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
 		8D83D47C23F079CD0012A1FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8D83D48623F0BE6E0012A1FC /* Error Handling */,
+				8D83D47D23F07A000012A1FC /* Deezer Api */,
+				8D83D48223F07B880012A1FC /* Artist.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8D83D47D23F07A000012A1FC /* Deezer Api */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */,
+				8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */,
+			);
+			path = "Deezer Api";
 			sourceTree = "<group>";
 		};
 		8D83D48623F0BE6E0012A1FC /* Error Handling */ = {
@@ -230,11 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */,
 				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
 				8D83D45A23F043380012A1FC /* ViewController.swift in Sources */,
+				8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */,
 				8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */,
 				8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */,
 				8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */,
+				8D83D48323F07B880012A1FC /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
