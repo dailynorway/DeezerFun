@@ -19,6 +19,7 @@
 		8D83D48323F07B880012A1FC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48223F07B880012A1FC /* Artist.swift */; };
 		8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */; };
 		8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48723F0BE910012A1FC /* DeezerApiError.swift */; };
+		8D83D48A23F0BEB90012A1FC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8D83D48223F07B880012A1FC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerNativeError.swift; sourceTree = "<group>"; };
 		8D83D48723F0BE910012A1FC /* DeezerApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiError.swift; sourceTree = "<group>"; };
+		8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				8D83D48723F0BE910012A1FC /* DeezerApiError.swift */,
 				8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */,
+				8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */,
 			);
 			path = "Error Handling";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */,
 				8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */,
 				8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */,
+				8D83D48A23F0BEB90012A1FC /* ErrorHandler.swift in Sources */,
 				8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */,
 				8D83D48323F07B880012A1FC /* Artist.swift in Sources */,
 			);
