@@ -14,6 +14,7 @@
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
 		8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D46023F043390012A1FC /* LaunchScreen.storyboard */; };
 		8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D46C23F043390012A1FC /* DeezerFunTests.swift */; };
+		8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		8D83D46823F043390012A1FC /* DeezerFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D46C23F043390012A1FC /* DeezerFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerFunTests.swift; sourceTree = "<group>"; };
 		8D83D46E23F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerNativeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,22 @@
 				8D83D46023F043390012A1FC /* LaunchScreen.storyboard */,
 			);
 			path = "App Start";
+			sourceTree = "<group>";
+		};
+		8D83D47C23F079CD0012A1FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D48623F0BE6E0012A1FC /* Error Handling */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D83D48623F0BE6E0012A1FC /* Error Handling */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */,
+			);
+			path = "Error Handling";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
 				8D83D45A23F043380012A1FC /* ViewController.swift in Sources */,
 				8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */,
 				8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */,
