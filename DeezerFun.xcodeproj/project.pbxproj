@@ -15,6 +15,7 @@
 		8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D46023F043390012A1FC /* LaunchScreen.storyboard */; };
 		8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D46C23F043390012A1FC /* DeezerFunTests.swift */; };
 		8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */; };
+		8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48723F0BE910012A1FC /* DeezerApiError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8D83D46C23F043390012A1FC /* DeezerFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerFunTests.swift; sourceTree = "<group>"; };
 		8D83D46E23F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerNativeError.swift; sourceTree = "<group>"; };
+		8D83D48723F0BE910012A1FC /* DeezerApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		8D83D48623F0BE6E0012A1FC /* Error Handling */ = {
 			isa = PBXGroup;
 			children = (
+				8D83D48723F0BE910012A1FC /* DeezerApiError.swift */,
 				8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */,
 			);
 			path = "Error Handling";
@@ -229,6 +232,7 @@
 			files = (
 				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
 				8D83D45A23F043380012A1FC /* ViewController.swift in Sources */,
+				8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */,
 				8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */,
 				8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */,
 			);
