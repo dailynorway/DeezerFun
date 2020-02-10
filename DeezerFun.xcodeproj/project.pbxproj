@@ -42,6 +42,7 @@
 		8D85101723F1A3BD009C1800 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101623F1A3BD009C1800 /* SearchDataSource.swift */; };
 		8D85101923F1A420009C1800 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101823F1A420009C1800 /* SearchCell.swift */; };
 		8D85101B23F1A633009C1800 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101A23F1A633009C1800 /* SearchPresenter.swift */; };
+		8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		8D85101623F1A3BD009C1800 /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
 		8D85101823F1A420009C1800 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		8D85101A23F1A633009C1800 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				8D83D47723F077450012A1FC /* App Start */,
 				8D83D47823F0776B0012A1FC /* Data Layer */,
 				8D85101023F1A298009C1800 /* Modules */,
+				8D85101C23F1B235009C1800 /* Utils */,
 				8D83D46323F043390012A1FC /* Info.plist */,
 				8D83D45E23F043390012A1FC /* Assets.xcassets */,
 			);
@@ -271,6 +274,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		8D85101C23F1B235009C1800 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +410,7 @@
 				8D83D48A23F0BEB90012A1FC /* ErrorHandler.swift in Sources */,
 				8D850FEF23F1553D009C1800 /* DeezerApiTrack.swift in Sources */,
 				8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */,
+				8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */,
 				8D83D48323F07B880012A1FC /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
