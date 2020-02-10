@@ -34,6 +34,7 @@
 		8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFE23F18961009C1800 /* DeezerNativeError.json */; };
 		8D85100123F18C97009C1800 /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100023F18C97009C1800 /* Albums.json */; };
 		8D85100523F18DBC009C1800 /* AlbumsBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */; };
+		8D85100B23F194FA009C1800 /* DeezerApiClientAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */; };
 		8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100E23F19A32009C1800 /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		8D850FFE23F18961009C1800 /* DeezerNativeError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeezerNativeError.json; sourceTree = "<group>"; };
 		8D85100023F18C97009C1800 /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
 		8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AlbumsBadlyFormatted.json; sourceTree = "<group>"; };
+		8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClientAlbumTests.swift; sourceTree = "<group>"; };
 		8D85100E23F19A32009C1800 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8D850FF423F169A0009C1800 /* DeezerApiClientArtistsTests.swift */,
+				8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */,
 				8D850FF923F173AC009C1800 /* Utils */,
 				8D850FF623F171C0009C1800 /* Stubs */,
 				8D83D46E23F043390012A1FC /* Info.plist */,
@@ -367,6 +370,7 @@
 			files = (
 				8D850FF523F169A0009C1800 /* DeezerApiClientArtistsTests.swift in Sources */,
 				8D850FFB23F173BB009C1800 /* Bundle+extension.swift in Sources */,
+				8D85100B23F194FA009C1800 /* DeezerApiClientAlbumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
