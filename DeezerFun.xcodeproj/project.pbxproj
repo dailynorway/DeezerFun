@@ -42,8 +42,8 @@
 		8D85101723F1A3BD009C1800 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101623F1A3BD009C1800 /* SearchDataSource.swift */; };
 		8D85101923F1A420009C1800 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101823F1A420009C1800 /* SearchCell.swift */; };
 		8D85101B23F1A633009C1800 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101A23F1A633009C1800 /* SearchPresenter.swift */; };
-		8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */; };
 		8D85101E23F1B253009C1800 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101D23F1B253009C1800 /* UIImageView+extension.swift */; };
+		8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +96,8 @@
 		8D85101623F1A3BD009C1800 /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
 		8D85101823F1A420009C1800 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		8D85101A23F1A633009C1800 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
-		8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+extension.swift"; sourceTree = "<group>"; };
 		8D85101D23F1B253009C1800 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +152,7 @@
 		8D83D46B23F043390012A1FC /* DeezerFunTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D850FF423F169A0009C1800 /* DeezerApiClientArtistsTests.swift */,
-				8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */,
-				8D85100C23F19781009C1800 /* DeezerApiClientTracksTests.swift */,
+				8D85102423F1DB1E009C1800 /* Network */,
 				8D850FF923F173AC009C1800 /* Utils */,
 				8D850FF623F171C0009C1800 /* Stubs */,
 				8D83D46E23F043390012A1FC /* Info.plist */,
@@ -283,6 +281,16 @@
 				8D85101D23F1B253009C1800 /* UIImageView+extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8D85102423F1DB1E009C1800 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8D850FF423F169A0009C1800 /* DeezerApiClientArtistsTests.swift */,
+				8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */,
+				8D85100C23F19781009C1800 /* DeezerApiClientTracksTests.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
