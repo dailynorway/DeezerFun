@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45523F043380012A1FC /* AppDelegate.swift */; };
 		8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45723F043380012A1FC /* SceneDelegate.swift */; };
-		8D83D45A23F043380012A1FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45923F043380012A1FC /* ViewController.swift */; };
-		8D83D45D23F043380012A1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45B23F043380012A1FC /* Main.storyboard */; };
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
 		8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D46023F043390012A1FC /* LaunchScreen.storyboard */; };
 		8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D47A23F079840012A1FC /* DeezerApiClient.swift */; };
@@ -55,8 +53,6 @@
 		8D83D45223F043380012A1FC /* DeezerFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D45523F043380012A1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D83D45723F043380012A1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D83D45923F043380012A1FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8D83D45C23F043380012A1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D83D45E23F043390012A1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D83D46123F043390012A1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D83D46323F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,8 +127,6 @@
 			children = (
 				8D83D47723F077450012A1FC /* App Start */,
 				8D83D47823F0776B0012A1FC /* Data Layer */,
-				8D83D45923F043380012A1FC /* ViewController.swift */,
-				8D83D45B23F043380012A1FC /* Main.storyboard */,
 				8D83D45E23F043390012A1FC /* Assets.xcassets */,
 				8D83D46323F043390012A1FC /* Info.plist */,
 			);
@@ -329,7 +323,6 @@
 			files = (
 				8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */,
 				8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */,
-				8D83D45D23F043380012A1FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +350,6 @@
 				8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */,
 				8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */,
 				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
-				8D83D45A23F043380012A1FC /* ViewController.swift in Sources */,
 				8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */,
 				8D850FE923F14D8B009C1800 /* DeezerApiGetAlbums.swift in Sources */,
 				8D850FED23F14E6E009C1800 /* Album.swift in Sources */,
@@ -397,14 +389,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8D83D45B23F043380012A1FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D83D45C23F043380012A1FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8D83D46023F043390012A1FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
