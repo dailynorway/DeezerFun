@@ -30,6 +30,7 @@
 		8D850FF323F1563C009C1800 /* DeezerApiGetTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */; };
 		8D850FF823F171D8009C1800 /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FF723F171D8009C1800 /* Artists.json */; };
 		8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */; };
+		8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFE23F18961009C1800 /* DeezerNativeError.json */; };
 		8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100E23F19A32009C1800 /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiGetTracks.swift; sourceTree = "<group>"; };
 		8D850FF723F171D8009C1800 /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
 		8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArtistsBadlyFormatted.json; sourceTree = "<group>"; };
+		8D850FFE23F18961009C1800 /* DeezerNativeError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeezerNativeError.json; sourceTree = "<group>"; };
 		8D85100E23F19A32009C1800 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 			children = (
 				8D850FF723F171D8009C1800 /* Artists.json */,
 				8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */,
+				8D850FFE23F18961009C1800 /* DeezerNativeError.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D850FF823F171D8009C1800 /* Artists.json in Resources */,
+				8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */,
 				8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
