@@ -28,6 +28,7 @@
 		8D850FEF23F1553D009C1800 /* DeezerApiTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */; };
 		8D850FF123F1560F009C1800 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF023F1560F009C1800 /* Track.swift */; };
 		8D850FF323F1563C009C1800 /* DeezerApiGetTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */; };
+		8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100E23F19A32009C1800 /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiTrack.swift; sourceTree = "<group>"; };
 		8D850FF023F1560F009C1800 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiGetTracks.swift; sourceTree = "<group>"; };
+		8D85100E23F19A32009C1800 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8D83D47A23F079840012A1FC /* DeezerApiClient.swift */,
+				8D85100E23F19A32009C1800 /* HttpClient.swift */,
 			);
 			path = "Network Clients";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */,
 				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
 				8D83D45A23F043380012A1FC /* ViewController.swift in Sources */,
+				8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */,
 				8D850FE923F14D8B009C1800 /* DeezerApiGetAlbums.swift in Sources */,
 				8D850FED23F14E6E009C1800 /* Album.swift in Sources */,
 				8D850FEB23F14DB5009C1800 /* DeezerApiAlbum.swift in Sources */,
