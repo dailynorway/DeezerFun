@@ -12,8 +12,11 @@ import Foundation
 
 class DeezerApiClient {
     
+    let httpClient: HttpClient
     let errorHandler: ErrorHandler
-    init(errorHandler: ErrorHandler = ErrorHandler()) {
+    
+    init(httpClient: HttpClient = HttpClient(), errorHandler: ErrorHandler = ErrorHandler()) {
+        self.httpClient = httpClient
         self.errorHandler = errorHandler
     }
     
@@ -51,7 +54,7 @@ class DeezerApiClient {
     }
         
     func searchArtist(_ artist: String, completionHandler: @escaping (Result<[Artist], DeezerApiError>) -> Void) {
-        URLSession.shared.dataTask(with: Router.searchArtist(artist).urlRequest) { (data, response, error) in
+        httpClient.sendRequest(router: Router.searchArtist(artist)) { (data, response, error) in
             guard self.errorHandler.validateResponse(data: data, error: error, completionHandler: completionHandler) else { return }
             do {
                 let artistsDecodedResponse = try JSONDecoder().decode(DeezerApiSearchArtist.self, from: data!)
@@ -61,11 +64,11 @@ class DeezerApiClient {
             } catch let error {
                 completionHandler(Result.failure(.decoding(error as! DecodingError)))
             }
-        }.resume()
+        }
     }
     
     func getAlbums(_ artistId: Int, completionHandler: @escaping (Result<[Album], DeezerApiError>) -> Void) {
-        URLSession.shared.dataTask(with: Router.getAlbums(artistId).urlRequest) { (data, response, error) in
+        httpClient.sendRequest(router: Router.getAlbums(artistId)) { (data, response, error) in
             guard self.errorHandler.validateResponse(data: data, error: error, completionHandler: completionHandler) else { return }
             do {
                 let albumsDecodedResponse = try JSONDecoder().decode(DeezerApiGetAlbums.self, from: data!)
@@ -75,11 +78,11 @@ class DeezerApiClient {
             } catch let error {
                 completionHandler(Result.failure(.decoding(error as! DecodingError)))
             }
-        }.resume()
+        }
     }
     
     func getTracks(_ albumId: Int, completionHandler: @escaping (Result<[Track], DeezerApiError>) -> Void) {
-        URLSession.shared.dataTask(with: Router.getTracks(albumId).urlRequest) { (data, response, error) in
+        httpClient.sendRequest(router: Router.getTracks(albumId)) { (data, response, error) in
             guard self.errorHandler.validateResponse(data: data, error: error, completionHandler: completionHandler) else { return }
             do {
                 let tracksDecodedResponse = try JSONDecoder().decode(DeezerApiGetTracks.self, from: data!)
@@ -89,6 +92,6 @@ class DeezerApiClient {
             } catch let error {
                 completionHandler(Result.failure(.decoding(error as! DecodingError)))
             }
-        }.resume()
+        }
     }
 }
