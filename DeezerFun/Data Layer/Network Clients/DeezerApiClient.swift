@@ -35,7 +35,8 @@ class DeezerApiClient {
         var endPoint: URL {
             switch self {
             case .searchArtist(let artist):
-                return URL(string: "https://api.deezer.com/search/artist?q=\(artist)")!
+                let encodedArtist = artist.addingPercentEncoding(withAllowedCharacters: .alphanumerics)
+                return URL(string: "https://api.deezer.com/search/artist?q=\(encodedArtist!)")!
             case .getAlbums(let artistId):
                 return URL(string: "https://api.deezer.com/artist/\(artistId)/albums")!
             case .getTracks(let albumId):
