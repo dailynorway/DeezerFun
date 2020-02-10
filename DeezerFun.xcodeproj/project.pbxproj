@@ -28,6 +28,8 @@
 		8D850FEF23F1553D009C1800 /* DeezerApiTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */; };
 		8D850FF123F1560F009C1800 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF023F1560F009C1800 /* Track.swift */; };
 		8D850FF323F1563C009C1800 /* DeezerApiGetTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */; };
+		8D850FF823F171D8009C1800 /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FF723F171D8009C1800 /* Artists.json */; };
+		8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */; };
 		8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100E23F19A32009C1800 /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiTrack.swift; sourceTree = "<group>"; };
 		8D850FF023F1560F009C1800 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiGetTracks.swift; sourceTree = "<group>"; };
+		8D850FF723F171D8009C1800 /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
+		8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArtistsBadlyFormatted.json; sourceTree = "<group>"; };
 		8D85100E23F19A32009C1800 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8D83D46C23F043390012A1FC /* DeezerFunTests.swift */,
+				8D850FF623F171C0009C1800 /* Stubs */,
 				8D83D46E23F043390012A1FC /* Info.plist */,
 			);
 			path = DeezerFunTests;
@@ -198,6 +203,15 @@
 				8D850FE623F14AB3009C1800 /* HttpMethod.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8D850FF623F171C0009C1800 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				8D850FF723F171D8009C1800 /* Artists.json */,
+				8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D850FF823F171D8009C1800 /* Artists.json in Resources */,
+				8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
