@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+
 class DeezerApiClient {
     
     let errorHandler: ErrorHandler
@@ -17,6 +19,13 @@ class DeezerApiClient {
     
     enum Router {
         case searchArtist(String)
+        
+        var method: HttpMethod {
+            switch self {
+            case .searchArtist:
+                return .get
+            }
+        }
         
         var endPoint: URL {
             switch self {
@@ -28,7 +37,9 @@ class DeezerApiClient {
         var urlRequest: URLRequest {
             switch self {
             case .searchArtist:
-                return URLRequest(url: endPoint)
+                var request = URLRequest(url: endPoint)
+                request.httpMethod = method.rawValue
+                return request
             }
         }
     }
