@@ -34,6 +34,8 @@
 		8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFE23F18961009C1800 /* DeezerNativeError.json */; };
 		8D85100123F18C97009C1800 /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100023F18C97009C1800 /* Albums.json */; };
 		8D85100523F18DBC009C1800 /* AlbumsBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */; };
+		8D85100723F192C7009C1800 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100623F192C7009C1800 /* Tracks.json */; };
+		8D85100923F19426009C1800 /* TracksBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100823F19426009C1800 /* TracksBadlyFormatted.json */; };
 		8D85100B23F194FA009C1800 /* DeezerApiClientAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */; };
 		8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100E23F19A32009C1800 /* HttpClient.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,8 @@
 		8D850FFE23F18961009C1800 /* DeezerNativeError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeezerNativeError.json; sourceTree = "<group>"; };
 		8D85100023F18C97009C1800 /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
 		8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AlbumsBadlyFormatted.json; sourceTree = "<group>"; };
+		8D85100623F192C7009C1800 /* Tracks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
+		8D85100823F19426009C1800 /* TracksBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TracksBadlyFormatted.json; sourceTree = "<group>"; };
 		8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClientAlbumTests.swift; sourceTree = "<group>"; };
 		8D85100E23F19A32009C1800 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +229,8 @@
 				8D850FFE23F18961009C1800 /* DeezerNativeError.json */,
 				8D85100023F18C97009C1800 /* Albums.json */,
 				8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */,
+				8D85100623F192C7009C1800 /* Tracks.json */,
+				8D85100823F19426009C1800 /* TracksBadlyFormatted.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -332,7 +338,9 @@
 				8D85100523F18DBC009C1800 /* AlbumsBadlyFormatted.json in Resources */,
 				8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */,
 				8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */,
+				8D85100923F19426009C1800 /* TracksBadlyFormatted.json in Resources */,
 				8D85100123F18C97009C1800 /* Albums.json in Resources */,
+				8D85100723F192C7009C1800 /* Tracks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
