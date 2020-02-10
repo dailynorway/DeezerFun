@@ -13,7 +13,6 @@
 		8D83D45D23F043380012A1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45B23F043380012A1FC /* Main.storyboard */; };
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
 		8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D46023F043390012A1FC /* LaunchScreen.storyboard */; };
-		8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D46C23F043390012A1FC /* DeezerFunTests.swift */; };
 		8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D47A23F079840012A1FC /* DeezerApiClient.swift */; };
 		8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */; };
 		8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */; };
@@ -55,7 +54,6 @@
 		8D83D46123F043390012A1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D83D46323F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D83D46823F043390012A1FC /* DeezerFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D83D46C23F043390012A1FC /* DeezerFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerFunTests.swift; sourceTree = "<group>"; };
 		8D83D46E23F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D83D47A23F079840012A1FC /* DeezerApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClient.swift; sourceTree = "<group>"; };
 		8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiSearchArtist.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 		8D83D46B23F043390012A1FC /* DeezerFunTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D83D46C23F043390012A1FC /* DeezerFunTests.swift */,
 				8D850FF923F173AC009C1800 /* Utils */,
 				8D850FF623F171C0009C1800 /* Stubs */,
 				8D83D46E23F043390012A1FC /* Info.plist */,
@@ -357,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */,
 				8D850FFB23F173BB009C1800 /* Bundle+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
