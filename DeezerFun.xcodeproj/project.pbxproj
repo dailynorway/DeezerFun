@@ -142,8 +142,8 @@
 		8D83D47C23F079CD0012A1FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D850FE523F14A98009C1800 /* Network */,
 				8D83D48623F0BE6E0012A1FC /* Error Handling */,
-				8D83D47D23F07A000012A1FC /* Deezer Api */,
 				8D83D48223F07B880012A1FC /* Artist.swift */,
 			);
 			path = Models;
@@ -166,6 +166,14 @@
 				8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */,
 			);
 			path = "Error Handling";
+			sourceTree = "<group>";
+		};
+		8D850FE523F14A98009C1800 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47D23F07A000012A1FC /* Deezer Api */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
