@@ -20,10 +20,11 @@ class DeezerApiClient {
     enum Router {
         case searchArtist(String)
         case getAlbums(Int)
+        case getTracks(Int)
         
         var method: HttpMethod {
             switch self {
-            case .searchArtist, .getAlbums:
+            case .searchArtist, .getAlbums, .getTracks:
                 return .get
             }
         }
@@ -34,13 +35,14 @@ class DeezerApiClient {
                 return URL(string: "https://api.deezer.com/search/artist?q=\(artist)")!
             case .getAlbums(let artistId):
                 return URL(string: "https://api.deezer.com/artist/\(artistId)/albums")!
-                
+            case .getTracks(let albumId):
+                return URL(string: "https://api.deezer.com/album/\(albumId)/tracks")!
             }
         }
         
         var urlRequest: URLRequest {
             switch self {
-            case .searchArtist, .getAlbums:
+            case .searchArtist, .getAlbums, .getTracks:
                 var request = URLRequest(url: endPoint)
                 request.httpMethod = method.rawValue
                 return request
@@ -69,6 +71,20 @@ class DeezerApiClient {
                 let albumsDecodedResponse = try JSONDecoder().decode(DeezerApiGetAlbums.self, from: data!)
                 let albums = albumsDecodedResponse.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium)}
                 completionHandler(Result.success(albums))
+                return
+            } catch let error {
+                completionHandler(Result.failure(.decoding(error as! DecodingError)))
+            }
+        }.resume()
+    }
+    
+    func getTracks(_ albumId: Int, completionHandler: @escaping (Result<[Track], DeezerApiError>) -> Void) {
+        URLSession.shared.dataTask(with: Router.getTracks(albumId).urlRequest) { (data, response, error) in
+            guard self.errorHandler.validateResponse(data: data, error: error, completionHandler: completionHandler) else { return }
+            do {
+                let tracksDecodedResponse = try JSONDecoder().decode(DeezerApiGetTracks.self, from: data!)
+                let tracks = tracksDecodedResponse.tracks.map {Track(id: $0.id, title: $0.title, shortTitle: $0.shortTitle, position: $0.position, duration: $0.duration, preview: $0.preview)}
+                completionHandler(Result.success(tracks))
                 return
             } catch let error {
                 completionHandler(Result.failure(.decoding(error as! DecodingError)))
