@@ -154,6 +154,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D7DFE2723F35F33007C29DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */,
+				8D85101D23F1B253009C1800 /* UIImageView+extension.swift */,
+				8D85103523F2B407009C1800 /* String+extension.swift */,
+				8D85103723F2C2F3009C1800 /* Date+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8D83D44923F043380012A1FC = {
 			isa = PBXGroup;
 			children = (
@@ -316,11 +327,8 @@
 		8D85101C23F1B235009C1800 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */,
-				8D85101D23F1B253009C1800 /* UIImageView+extension.swift */,
+				8D7DFE2723F35F33007C29DA /* Extensions */,
 				8D85103323F2A656009C1800 /* Storyboarded.swift */,
-				8D85103523F2B407009C1800 /* String+extension.swift */,
-				8D85103723F2C2F3009C1800 /* Date+extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
