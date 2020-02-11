@@ -71,7 +71,7 @@ class DeezerApiClient {
             guard self.errorHandler.validateResponse(data: data, error: error, completionHandler: completionHandler) else { return }
             do {
                 let albumsDecodedResponse = try JSONDecoder().decode(DeezerApiGetAlbums.self, from: data!)
-                var albums = albumsDecodedResponse.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, releaseDate: $0.releaseDate)}
+                var albums = albumsDecodedResponse.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, coverBig: $0.coverBig, releaseDate: $0.releaseDate)}
                 albums.sort {$0.releaseDate > $1.releaseDate}
                 completionHandler(Result.success(albums))
                 return
