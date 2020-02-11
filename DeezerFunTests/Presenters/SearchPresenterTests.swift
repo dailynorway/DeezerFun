@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DeezerFun
+@testable import Deezer_Fun
 
 let expectationForApiClientDescription = "Expectation Search has started on API Client"
 
@@ -30,8 +30,8 @@ class SearchPresenterTests: XCTestCase {
         XCTAssert(viewController.toggleEmptyStateImageCalled, "As soon as the controller load we need to display empty state")
     }
     
-    func testSearchRequestWithLessThan3Characters() {
-        presenter.searchArtistRequest(with: "Er")
+    func testSearchRequestWithLessThan2Characters() {
+        presenter.searchArtistRequest(with: "E")
         XCTAssert(viewController.toggleEmptyStateImageCalled, "There will be no search until we have more then 3 characters")
         XCTAssert(apiClient.searchArtistEndpointCalled == false, "No network request must be made until we have more than 3 characters")
         XCTAssert(viewController.startLoadingCalled == false, "The loading spinner will not be displayed")

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import DeezerFun
+@testable import Deezer_Fun
 
 fileprivate let loadingTracksExpectationDescription = "Loading Tracks Expectation"
 
