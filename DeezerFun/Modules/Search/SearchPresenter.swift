@@ -40,7 +40,7 @@ class SearchPresenter {
     
     // MARK: Requests
     func searchArtistRequest(with artistText: String) {
-        if artistText.count < 3 {
+        if artistText.count < 2 {
             dataSource.artists = []
             viewController.toggleEmptyStateImage()
             viewController.refreshTable()
