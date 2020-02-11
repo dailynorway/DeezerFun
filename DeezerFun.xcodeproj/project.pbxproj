@@ -61,6 +61,7 @@
 		8D85104523F2DFBF009C1800 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104423F2DFBF009C1800 /* TrackCell.swift */; };
 		8D85104723F2FD08009C1800 /* TrackHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85104623F2FD08009C1800 /* TrackHeaderView.xib */; };
 		8D85104923F2FD8E009C1800 /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104823F2FD8E009C1800 /* TrackHeaderView.swift */; };
+		8D85104D23F3335A009C1800 /* TracksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104C23F3335A009C1800 /* TracksPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		8D85104423F2DFBF009C1800 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		8D85104623F2FD08009C1800 /* TrackHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackHeaderView.xib; sourceTree = "<group>"; };
 		8D85104823F2FD8E009C1800 /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
+		8D85104C23F3335A009C1800 /* TracksPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 			children = (
 				8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */,
 				8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */,
+				8D85104C23F3335A009C1800 /* TracksPresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D85104D23F3335A009C1800 /* TracksPresenterTests.swift in Sources */,
 				8D85100D23F19781009C1800 /* DeezerApiClientTracksTests.swift in Sources */,
 				8D85102723F1DB4D009C1800 /* SearchPresenterTests.swift in Sources */,
 				8D85103A23F2D61A009C1800 /* AlbumsPresenterTests.swift in Sources */,
