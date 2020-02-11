@@ -31,7 +31,6 @@ class TracksViewController: UITableViewController, Storyboarded {
         setHeaderImage()
         prepareTableView()
         addActivityIndicatorView()
-        
     }
     
     private func prepareTableView() {
@@ -45,6 +44,7 @@ class TracksViewController: UITableViewController, Storyboarded {
     private func setHeaderImage() {
         var imageSet = false
         let imageView = UIImageView()
+        imageView.frame.size.height = UIScreen.main.bounds.width
         imageView.contentMode = .scaleToFill
         let _ = imageView.downloadImage(from: presenter.album.coverBig) { [weak self] _ in
             imageSet = true
@@ -52,6 +52,7 @@ class TracksViewController: UITableViewController, Storyboarded {
         }
         if !imageSet {
             let spinner = UIActivityIndicatorView()
+            spinner.frame.size.height = UIScreen.main.bounds.width
             spinner.startAnimating()
             tableView.tableHeaderView = spinner
         }
