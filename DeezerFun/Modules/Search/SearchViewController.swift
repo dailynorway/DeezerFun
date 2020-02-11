@@ -55,7 +55,7 @@ extension SearchViewController: SearchViewControllerProtocol {
     func toggleEmptyStateImage() {
         if presenter.dataSource.artists.isEmpty {
             let imageView = UIImageView(image: UIImage(named: "empty_state"))
-            imageView.contentMode = .center
+            imageView.contentMode = .scaleAspectFill
             imageView.tintColor = .systemGray
             tableView.backgroundView = imageView
         } else {
