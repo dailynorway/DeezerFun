@@ -9,7 +9,7 @@
 import XCTest
 @testable import Deezer_Fun
 
-let expectationForApiClientDescription = "Expectation Search has started on API Client"
+fileprivate let expectationForApiClientDescription = "Expectation Search has started on API Client"
 
 class SearchPresenterTests: XCTestCase {
 
