@@ -53,6 +53,7 @@
 		8D85103423F2A656009C1800 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103323F2A656009C1800 /* Storyboarded.swift */; };
 		8D85103623F2B407009C1800 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103523F2B407009C1800 /* String+extension.swift */; };
 		8D85103823F2C2F3009C1800 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103723F2C2F3009C1800 /* Date+extension.swift */; };
+		8D85103A23F2D61A009C1800 /* AlbumsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		8D85103323F2A656009C1800 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		8D85103523F2B407009C1800 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		8D85103723F2C2F3009C1800 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */,
+				8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			files = (
 				8D85100D23F19781009C1800 /* DeezerApiClientTracksTests.swift in Sources */,
 				8D85102723F1DB4D009C1800 /* SearchPresenterTests.swift in Sources */,
+				8D85103A23F2D61A009C1800 /* AlbumsPresenterTests.swift in Sources */,
 				8D850FF523F169A0009C1800 /* DeezerApiClientArtistsTests.swift in Sources */,
 				8D850FFB23F173BB009C1800 /* Bundle+extension.swift in Sources */,
 				8D85100B23F194FA009C1800 /* DeezerApiClientAlbumTests.swift in Sources */,

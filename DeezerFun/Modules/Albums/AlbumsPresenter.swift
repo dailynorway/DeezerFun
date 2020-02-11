@@ -33,8 +33,8 @@ class AlbumsPresenter {
     }
     
     func viewDidLoad() {
-        fetchAlbums(artistId: artist.id)
         viewController.setTitle(to: artist.name)
+        fetchAlbums(artistId: artist.id)
     }
     
     // MARK: Requests

@@ -1,0 +1,98 @@
+//
+//  AlbumsPresenterTests.swift
+//  DeezerFunTests
+//
+//  Created by Erick Vavretchek on 11/2/20.
+//  Copyright © 2020 Erick Vavretchek. All rights reserved.
+//
+
+import XCTest
+@testable import DeezerFun
+
+fileprivate let loadingAlbumsExpectationDescription = "Loading Albums Expectation"
+
+class AlbumsPresenterTests: XCTestCase {
+
+    var viewController: AlbumsViewControllerMock!
+    fileprivate var apiClient: DeezerApiClientMock!
+    var presenter: AlbumsPresenter!
+    var testBundle: Bundle!
+    
+    override func setUp() {
+        testBundle = Bundle(for: type(of: self))
+        viewController = AlbumsViewControllerMock()
+        apiClient = DeezerApiClientMock(testBundle: testBundle)
+        let artist = Artist(id: 828, name: "Dream Theater", pictureSmall: URL(string: "https://cdns-images.dzcdn.net/images/artist/c7daf68cd427ff2d6317d59d39898cd2/56x56-000000-80-0-0.jpg")!)
+        presenter = AlbumsPresenter(viewController: viewController, deezerApiClient: apiClient, artist: artist)
+    }
+    
+    func testViewDidLoad() {
+        presenter.viewDidLoad()
+        XCTAssert(viewController.receivedTitle == "Dream Theater", "Received title must be Dream Theater")
+        XCTAssert(viewController.startLoadingCalled, "Start loading must be called")
+        XCTAssert(presenter.dataSource.albums.count == 4, "Number of fetched albums must be 4")
+        let loadingAlbumsExpectation = self.expectation(description: loadingAlbumsExpectationDescription)
+        loadingAlbumsExpectation.expectedFulfillmentCount = 2
+        viewController.expectations.append(loadingAlbumsExpectation)
+        wait(for: [loadingAlbumsExpectation], timeout: 1)
+    }
+    
+    func testAlbumSelection() {
+        presenter.viewDidLoad()
+        presenter.selectAlbumRequest(index: 1)
+        XCTAssert(viewController.navigateToAlbumCalled, "It must initiate navigation to album")
+        XCTAssert(viewController.receivedAlbumId == 56534782, "It must receive albumd with id 56534782")
+    }
+}
+
+fileprivate class DeezerApiClientMock: DeezerApiClient {
+    let testBundle: Bundle
+    init(testBundle: Bundle) { self.testBundle = testBundle }
+    
+    override func getAlbums(_ artistId: Int, completionHandler: @escaping (Result<[Album], DeezerApiError>) -> Void) {
+        let decodedAlbumsData = testBundle.decode(DeezerApiGetAlbums.self, from: "Albums.json")
+        let albums = decodedAlbumsData.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, releaseDate: $0.releaseDate)}
+        completionHandler(Result.success(albums))
+    }
+}
+
+class AlbumsViewControllerMock: AlbumsViewControllerProtocol {
+    var expectations = [XCTestExpectation]()
+    
+    var receivedTitle: String? = nil
+    func setTitle(to title: String) {
+        receivedTitle = title
+    }
+    
+    var startLoadingCalled = false
+    func startLoading() {
+        startLoadingCalled = true
+    }
+    
+    var stopLoadingCalled = false
+    func stopLoading() {
+        let expectation = expectations.first {$0.description == loadingAlbumsExpectationDescription}
+        guard let foundExpectation = expectation else {
+            return
+        }
+        stopLoadingCalled = true
+        foundExpectation.fulfill()
+    }
+    
+    var refreshCollectionCalled = false
+    func refreshCollection() {
+        let expectation = expectations.first {$0.description == loadingAlbumsExpectationDescription}
+        guard let foundExpectation = expectation else {
+            return
+        }
+        refreshCollectionCalled = true
+        foundExpectation.fulfill()
+    }
+    
+    var navigateToAlbumCalled = false
+    var receivedAlbumId: Int? = nil
+    func navigateToAlbum(id: Int) {
+        navigateToAlbumCalled = true
+        receivedAlbumId = id
+    }
+}
