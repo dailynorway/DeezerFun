@@ -13,6 +13,7 @@ protocol TracksViewControllerProtocol: class {
     func stopLoading()
     func refreshTable()
     func setTitle(to title: String)
+    func displayPlayerController(album: Album, track: Track)
 }
 
 class TracksPresenter {
@@ -57,5 +58,10 @@ class TracksPresenter {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    // MARK: Requests
+    func displayPlayerRequest(disk: Int, track: Int) {
+        viewController.displayPlayerController(album: album, track: dataSource.tracks[disk][track])
     }
 }

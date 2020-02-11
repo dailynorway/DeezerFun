@@ -81,6 +81,8 @@ class TracksViewController: UITableViewController, Storyboarded {
         return headerView
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.displayPlayerRequest(disk: indexPath.section, track: indexPath.row)
     }
 }
 
@@ -90,4 +92,49 @@ extension TracksViewController: TracksViewControllerProtocol {
     func refreshTable() { tableView.reloadData() }
     func setTitle(to title: String) { self.title = title }
     
+    func displayPlayerController(album: Album, track: Track) {
+        let vc = AVPlayerViewController()
+        let bounds = UIScreen.main.bounds
+        let distanceFromBotton = CGFloat(140.0)
+        
+        let titleLabel = UILabel()
+        let titleString = track.title
+        titleLabel.text = titleString
+        titleLabel.backgroundColor = UIColor(named: "uilabel_background")
+        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
+        let titleHeight = titleLabel.systemLayoutSizeFitting(
+            CGSize(width: bounds.size.width - 40,
+                   height: UIView.layoutFittingCompressedSize.height),
+            withHorizontalFittingPriority: .required,
+            verticalFittingPriority: .fittingSizeLevel).height
+        titleLabel.frame = CGRect(x: 20, y: bounds.size.height - titleHeight - distanceFromBotton,
+                                  width: bounds.size.width - 40, height: titleHeight)
+        
+        let albumArtView = UIImageView()
+        albumArtView.contentMode = .scaleAspectFit
+        _ = albumArtView.downloadImage(from: album.coverBig)
+        
+        
+        let playerItem = AVPlayerItem(url: track.preview)
+        let player = AVPlayer(playerItem: playerItem)
+        vc.player = player
+        albumArtView.frame =  bounds
+
+        let spinner = UIActivityIndicatorView()
+        spinner.startAnimating()
+        spinner.color = .systemPink
+        spinner.frame = UIScreen.main.bounds
+        spinner.style = .large
+        
+        vc.contentOverlayView?.addSubview(spinner)
+        vc.contentOverlayView?.addSubview(albumArtView)
+        vc.contentOverlayView?.addSubview(titleLabel)
+        
+        present(vc, animated: true) {
+            vc.allowsPictureInPicturePlayback = true
+            vc.showsPlaybackControls = true
+            vc.player?.play()
+        }
+    }
 }
