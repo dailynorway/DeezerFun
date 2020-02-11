@@ -17,10 +17,6 @@ class SearchCell: UITableViewCell {
     static let reuseIdentifier = "SearchCell"
     private var task: URLSessionDataTask?
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         task?.cancel()

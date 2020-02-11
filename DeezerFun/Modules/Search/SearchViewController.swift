@@ -39,6 +39,10 @@ class SearchViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 68
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.selectArtistRequest(index: indexPath.row)
+    }
 }
 
 // MARK: SearchViewControllerProtocol
@@ -65,6 +69,12 @@ extension SearchViewController: SearchViewControllerProtocol {
     
     func stopLoading() {
         searchController.searchBar.isLoading = false
+    }
+    
+    func navigateToAlbums(for artist: Artist) {
+        let vc = AlbumsViewController.instantiate()
+        vc.presenter = AlbumsPresenter(viewController: vc, artist: artist)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
