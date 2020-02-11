@@ -75,7 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D83D45223F043380012A1FC /* DeezerFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D83D45223F043380012A1FC /* Deezer Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deezer Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D45523F043380012A1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D83D45723F043380012A1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D83D45E23F043390012A1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		8D83D45323F043380012A1FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D83D45223F043380012A1FC /* DeezerFun.app */,
+				8D83D45223F043380012A1FC /* Deezer Fun.app */,
 				8D83D46823F043390012A1FC /* DeezerFunTests.xctest */,
 			);
 			name = Products;
@@ -388,7 +388,7 @@
 			);
 			name = DeezerFun;
 			productName = DeezerFun;
-			productReference = 8D83D45223F043380012A1FC /* DeezerFun.app */;
+			productReference = 8D83D45223F043380012A1FC /* Deezer Fun.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8D83D46723F043390012A1FC /* DeezerFunTests */ = {
@@ -682,7 +682,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.vavre.DeezerFun;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deezer Fun";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -700,7 +700,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.vavre.DeezerFun;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deezer Fun";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
