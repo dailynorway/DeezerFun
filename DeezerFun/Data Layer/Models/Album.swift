@@ -12,4 +12,5 @@ struct Album {
     let id: Int
     let title: String
     let coverMedium: URL
+    let releaseDate: Date
 }
