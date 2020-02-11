@@ -7,84 +7,87 @@
 //
 
 import UIKit
+import AVKit
 
-class TracksViewController: UITableViewController {
+class TracksViewController: UITableViewController, Storyboarded {
 
+    var presenter: TracksPresenter!
+    let activityIndicator = UIActivityIndicatorView(style: .medium)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        presenter.viewDidLoad()
+        prepareUiElements()
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        guard let header = tableView.tableHeaderView else { return }
+        header.frame.size.height = UIScreen.main.bounds.width
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    // MARK: Private
+    private func prepareUiElements() {
+        setHeaderImage()
+        prepareTableView()
+        addActivityIndicatorView()
+        
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    private func prepareTableView() {
+        tableView.dataSource = presenter.dataSource
+        tableView.estimatedRowHeight = 53
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: TrackHeaderView.reuseIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: TrackHeaderView.reuseIdentifier)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    private func setHeaderImage() {
+        var imageSet = false
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        let _ = imageView.downloadImage(from: presenter.album.coverBig) { [weak self] _ in
+            imageSet = true
+            self?.tableView.tableHeaderView = imageView
+        }
+        if !imageSet {
+            let spinner = UIActivityIndicatorView()
+            spinner.startAnimating()
+            tableView.tableHeaderView = spinner
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    private func addActivityIndicatorView() {
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.color = .systemGray
+        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        view.addConstraint(horizontalConstraint)
+        view.addConstraint(verticalConstraint)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    // MARK: UITableViewDelegate
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: TrackHeaderView.reuseIdentifier) as? TrackHeaderView else {
+            fatalError("Could not dequeue table section header, this should never happen!")
+        }
+        headerView.volumeLabel.text = "Volume \(section + 1)"
+        return headerView
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
     }
-    */
+}
 
+extension TracksViewController: TracksViewControllerProtocol {
+    func startLoading() { activityIndicator.isHidden = false }
+    func stopLoading() { activityIndicator.isHidden = true }
+    func refreshTable() { tableView.reloadData() }
+    func setTitle(to title: String) { self.title = title }
+    
 }
