@@ -81,13 +81,20 @@ class DeezerApiClient {
         }
     }
     
-    func getTracks(_ albumId: Int, completionHandler: @escaping (Result<[Track], DeezerApiError>) -> Void) {
+    func getTracks(_ albumId: Int, completionHandler: @escaping (Result<[[Track]], DeezerApiError>) -> Void) {
         httpClient.sendRequest(router: Router.getTracks(albumId)) { (data, response, error) in
             guard self.errorHandler.validateResponse(data: data, error: error, completionHandler: completionHandler) else { return }
             do {
                 let tracksDecodedResponse = try JSONDecoder().decode(DeezerApiGetTracks.self, from: data!)
-                let tracks = tracksDecodedResponse.tracks.map {Track(id: $0.id, title: $0.title, shortTitle: $0.shortTitle, position: $0.position, duration: $0.duration, preview: $0.preview)}
-                completionHandler(Result.success(tracks))
+                let tracks = tracksDecodedResponse.tracks.map {Track(id: $0.id, title: $0.title, shortTitle: $0.shortTitle, position: $0.position, duration: $0.duration, preview: $0.preview, disk: $0.disk)}
+
+                var volumedTracks: [[Track]] = []
+                let max = tracks.map { $0.disk }.max()
+                guard max != nil else { return }
+                for disk in 1...max! {
+                    volumedTracks.append(tracks.filter {$0.disk == disk})
+                }
+                completionHandler(Result.success(volumedTracks))
                 return
             } catch let error {
                 completionHandler(Result.failure(.decoding(error as! DecodingError)))
