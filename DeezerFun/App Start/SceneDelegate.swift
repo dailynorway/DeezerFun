@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Network
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        monitorInternetAccess()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +49,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
+    private func monitorInternetAccess() {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .unsatisfied {
+                self.displayNoConnectionMessage()
+            }
+        }
+        monitor.start(queue: DispatchQueue(label: "Monitor"))
+    }
+    
+    private func displayNoConnectionMessage() {
+        let alert = UIAlertController(title: "No Internet Connection", message:"Please check your settings.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        }
+    }
 }
-
