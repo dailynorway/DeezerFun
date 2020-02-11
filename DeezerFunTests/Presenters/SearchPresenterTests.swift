@@ -14,7 +14,7 @@ let expectationForApiClientDescription = "Expectation Search has started on API 
 class SearchPresenterTests: XCTestCase {
 
     var viewController: SearchViewControllerMock!
-    var apiClient: DeezerApiClientMock!
+    fileprivate var apiClient: DeezerApiClientMock!
     var presenter: SearchPresenter!
     var testBundle: Bundle!
     
@@ -56,7 +56,7 @@ class SearchPresenterTests: XCTestCase {
     }
 }
 
-class DeezerApiClientMock: DeezerApiClient {
+fileprivate class DeezerApiClientMock: DeezerApiClient {
     var expectations = [XCTestExpectation]()
     
     var searchArtistEndpointCalled = false
