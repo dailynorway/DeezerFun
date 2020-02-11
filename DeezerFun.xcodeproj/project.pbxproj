@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7DFE2923F35F81007C29DA /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */; };
 		8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45523F043380012A1FC /* AppDelegate.swift */; };
 		8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45723F043380012A1FC /* SceneDelegate.swift */; };
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		8D83D45223F043380012A1FC /* Deezer Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deezer Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D45523F043380012A1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D83D45723F043380012A1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				8D85101D23F1B253009C1800 /* UIImageView+extension.swift */,
 				8D85103523F2B407009C1800 /* String+extension.swift */,
 				8D85103723F2C2F3009C1800 /* Date+extension.swift */,
+				8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				8D85101923F1A420009C1800 /* SearchCell.swift in Sources */,
 				8D85104123F2DF9C009C1800 /* TracksPresenter.swift in Sources */,
 				8D850FE723F14AB3009C1800 /* HttpMethod.swift in Sources */,
+				8D7DFE2923F35F81007C29DA /* UIViewController+extension.swift in Sources */,
 				8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */,
 				8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */,
 				8D85102E23F29EAF009C1800 /* AlbumsPresenter.swift in Sources */,
