@@ -81,6 +81,10 @@ extension SearchViewController: SearchViewControllerProtocol {
         vc.presenter = AlbumsPresenter(viewController: vc, artist: artist)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func displayErrorMessage(_ message: String) {
+        presentOkAlertWithTitleAndMessage(title: "Error", message: message)
+    }
 }
 
 // MARK: UITextFieldDelegate

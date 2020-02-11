@@ -92,7 +92,8 @@ extension TracksViewController: TracksViewControllerProtocol {
     func stopLoading() { activityIndicator.isHidden = true }
     func refreshTable() { tableView.reloadData() }
     func setTitle(to title: String) { self.title = title }
-    
+    func displayErrorMessage(_ message: String) { presentOkAlertWithTitleAndMessage(title: "Error", message: message) }
+
     func displayPlayerController(album: Album, track: Track) {
         let vc = AVPlayerViewController()
         let bounds = UIScreen.main.bounds
