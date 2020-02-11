@@ -13,7 +13,7 @@ protocol AlbumsViewControllerProtocol: class {
     func startLoading()
     func stopLoading()
     func refreshCollection()
-    func navigateToAlbum(id: Int)
+    func navigateToAlbum(album: Album)
 }
 
 class AlbumsPresenter {
@@ -39,7 +39,7 @@ class AlbumsPresenter {
     
     // MARK: Requests
     func selectAlbumRequest(index: Int) {
-        viewController.navigateToAlbum(id: dataSource.albums[index].id)
+        viewController.navigateToAlbum(album: dataSource.albums[index])
     }
     
     // MARK: Private

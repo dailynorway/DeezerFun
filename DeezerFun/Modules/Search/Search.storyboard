@@ -62,7 +62,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Mx9-VO-Ako">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="FlK-Zw-6Ax"/>
+                        <barButtonItem key="backBarButtonItem" id="FlK-Zw-6Ax"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IZ-H4-Oq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

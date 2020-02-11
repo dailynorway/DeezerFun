@@ -15,4 +15,5 @@ struct Track {
     let position: Int
     let duration: Int
     let preview: URL
+    let disk: Int
 }

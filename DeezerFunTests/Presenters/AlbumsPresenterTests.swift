@@ -43,6 +43,12 @@ class AlbumsPresenterTests: XCTestCase {
         XCTAssert(viewController.navigateToAlbumCalled, "It must initiate navigation to album")
         XCTAssert(viewController.receivedAlbumId == 56534782, "It must receive albumd with id 56534782")
     }
+    
+    func testNavigationToTracks() {
+        presenter.viewDidLoad()
+        presenter.selectAlbumRequest(index: 0)
+        XCTAssert(viewController.navigateToAlbumCalled)
+    }
 }
 
 fileprivate class DeezerApiClientMock: DeezerApiClient {
@@ -51,7 +57,7 @@ fileprivate class DeezerApiClientMock: DeezerApiClient {
     
     override func getAlbums(_ artistId: Int, completionHandler: @escaping (Result<[Album], DeezerApiError>) -> Void) {
         let decodedAlbumsData = testBundle.decode(DeezerApiGetAlbums.self, from: "Albums.json")
-        let albums = decodedAlbumsData.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, releaseDate: $0.releaseDate)}
+        let albums = decodedAlbumsData.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, coverBig: $0.coverBig, releaseDate: $0.releaseDate)}
         completionHandler(Result.success(albums))
     }
 }
@@ -91,8 +97,8 @@ class AlbumsViewControllerMock: AlbumsViewControllerProtocol {
     
     var navigateToAlbumCalled = false
     var receivedAlbumId: Int? = nil
-    func navigateToAlbum(id: Int) {
+    func navigateToAlbum(album: Album) {
         navigateToAlbumCalled = true
-        receivedAlbumId = id
+        receivedAlbumId = album.id
     }
 }

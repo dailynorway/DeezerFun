@@ -25,7 +25,7 @@ class DeezerApiClientTracksTests: XCTestCase {
         httpClient.errorSimulationType = .noError
         client.getTracks(123) { result in
             if case let Result.success(tracks) = result {
-                XCTAssert(tracks[2].title == "Digital Love", "Title of thirs track must be Digital Love")
+                XCTAssert(tracks[0][2].title == "Digital Love", "Title of thirs track must be Digital Love")
                 return
             }
             XCTFail()

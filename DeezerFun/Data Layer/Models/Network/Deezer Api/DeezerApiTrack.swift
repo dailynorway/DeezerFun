@@ -15,6 +15,7 @@ struct DeezerApiTrack: Codable {
     let position: Int
     let duration: Int
     let preview: URL
+    let disk: Int
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -23,5 +24,6 @@ struct DeezerApiTrack: Codable {
         case position = "track_position"
         case duration
         case preview
+        case disk = "disk_number"
     }
 }

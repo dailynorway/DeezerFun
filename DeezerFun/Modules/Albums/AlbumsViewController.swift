@@ -58,7 +58,10 @@ extension AlbumsViewController: AlbumsViewControllerProtocol {
     func startLoading() { activityIndicator.isHidden = false }
     func stopLoading() { activityIndicator.isHidden = true }
     func refreshCollection() { collectionView.reloadData() }
-    func navigateToAlbum(id: Int) {
-        
+    
+    func navigateToAlbum(album: Album) {
+        let vc = TracksViewController.instantiate()
+        vc.presenter = TracksPresenter(viewController: vc, artist: presenter.artist, album: album)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
