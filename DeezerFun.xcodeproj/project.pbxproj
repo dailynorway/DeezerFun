@@ -45,6 +45,11 @@
 		8D85101E23F1B253009C1800 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101D23F1B253009C1800 /* UIImageView+extension.swift */; };
 		8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */; };
 		8D85102723F1DB4D009C1800 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */; };
+		8D85102A23F29E84009C1800 /* Albums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85102923F29E84009C1800 /* Albums.storyboard */; };
+		8D85102C23F29E9D009C1800 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102B23F29E9D009C1800 /* AlbumsViewController.swift */; };
+		8D85102E23F29EAF009C1800 /* AlbumsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102D23F29EAF009C1800 /* AlbumsPresenter.swift */; };
+		8D85103023F29EBD009C1800 /* AlbumsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102F23F29EBD009C1800 /* AlbumsDataSource.swift */; };
+		8D85103223F29EDA009C1800 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103123F29EDA009C1800 /* AlbumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,11 @@
 		8D85101D23F1B253009C1800 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
 		8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+extension.swift"; sourceTree = "<group>"; };
 		8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		8D85102923F29E84009C1800 /* Albums.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Albums.storyboard; sourceTree = "<group>"; };
+		8D85102B23F29E9D009C1800 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		8D85102D23F29EAF009C1800 /* AlbumsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsPresenter.swift; sourceTree = "<group>"; };
+		8D85102F23F29EBD009C1800 /* AlbumsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDataSource.swift; sourceTree = "<group>"; };
+		8D85103123F29EDA009C1800 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +270,7 @@
 		8D85101023F1A298009C1800 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8D85102823F29E55009C1800 /* Albums */,
 				8D85101123F1A2A7009C1800 /* Search */,
 			);
 			path = Modules;
@@ -302,6 +313,18 @@
 				8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		8D85102823F29E55009C1800 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				8D85102923F29E84009C1800 /* Albums.storyboard */,
+				8D85102B23F29E9D009C1800 /* AlbumsViewController.swift */,
+				8D85102D23F29EAF009C1800 /* AlbumsPresenter.swift */,
+				8D85102F23F29EBD009C1800 /* AlbumsDataSource.swift */,
+				8D85103123F29EDA009C1800 /* AlbumCell.swift */,
+			);
+			path = Albums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D85102A23F29E84009C1800 /* Albums.storyboard in Resources */,
 				8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */,
 				8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */,
 				8D85101323F1A2BC009C1800 /* Search.storyboard in Resources */,
@@ -416,16 +440,20 @@
 				8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */,
 				8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */,
 				8D85101523F1A39A009C1800 /* SearchViewController.swift in Sources */,
+				8D85103023F29EBD009C1800 /* AlbumsDataSource.swift in Sources */,
 				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
 				8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */,
 				8D850FE923F14D8B009C1800 /* DeezerApiGetAlbums.swift in Sources */,
+				8D85103223F29EDA009C1800 /* AlbumCell.swift in Sources */,
 				8D850FED23F14E6E009C1800 /* Album.swift in Sources */,
+				8D85102C23F29E9D009C1800 /* AlbumsViewController.swift in Sources */,
 				8D850FEB23F14DB5009C1800 /* DeezerApiAlbum.swift in Sources */,
 				8D850FF323F1563C009C1800 /* DeezerApiGetTracks.swift in Sources */,
 				8D85101923F1A420009C1800 /* SearchCell.swift in Sources */,
 				8D850FE723F14AB3009C1800 /* HttpMethod.swift in Sources */,
 				8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */,
 				8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */,
+				8D85102E23F29EAF009C1800 /* AlbumsPresenter.swift in Sources */,
 				8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */,
 				8D850FF123F1560F009C1800 /* Track.swift in Sources */,
 				8D85101723F1A3BD009C1800 /* SearchDataSource.swift in Sources */,
