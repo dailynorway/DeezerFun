@@ -16,8 +16,10 @@ class SearchPresenterTests: XCTestCase {
     var viewController: SearchViewControllerMock!
     var apiClient: DeezerApiClientMock!
     var presenter: SearchPresenter!
+    var testBundle: Bundle!
     
     override func setUp() {
+        testBundle = Bundle(for: type(of: self))
         viewController = SearchViewControllerMock()
         apiClient = DeezerApiClientMock()
         presenter = SearchPresenter(viewController: viewController, deezerApiClient: apiClient)
@@ -42,6 +44,15 @@ class SearchPresenterTests: XCTestCase {
         apiClient.expectations.append(expectationForApiClient)
         wait(for: [expectationForApiClient], timeout: 1)
         XCTAssert(apiClient.searchArtistEndpointCalled, "No network request must be made until we have more than 3 characters")
+    }
+    
+    func testNavigationToSelectedArtist() {
+        let decodedArtistData = testBundle.decode(DeezerApiSearchArtist.self, from: "Artists.json")
+        let artists = decodedArtistData.artists.map {Artist(id: $0.id, name: $0.name, pictureSmall: $0.pictureSmall)}
+        presenter.dataSource.artists = artists
+        presenter.selectArtistRequest(index: 0)
+        XCTAssert(viewController.navigateToAlbumsCalled, "It must call navigate to Album")
+        XCTAssert(viewController.artistName == "Kygo", "Selected artist's name must be Kygo")
     }
 }
 
@@ -76,4 +87,11 @@ class SearchViewControllerMock: SearchViewControllerProtocol {
     }
     
     func stopLoading() {}
+    
+    var navigateToAlbumsCalled = false
+    var artistName: String? = nil
+    func navigateToAlbums(for artist: Artist) {
+        navigateToAlbumsCalled = true
+        artistName = artist.name
+    }
 }

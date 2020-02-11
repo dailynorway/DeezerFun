@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Albums View Controller-->
+        <scene sceneID="4i7-BJ-WFK">
+            <objects>
+                <collectionViewController storyboardIdentifier="AlbumsViewController" id="ONJ-s4-GZp" customClass="AlbumsViewController" customModule="DeezerFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Frm-si-Cc2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QYr-yu-1Jo">
+                            <size key="itemSize" width="100" height="328"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="Rzb-bB-DU0" customClass="AlbumCell" customModule="DeezerFun" customModuleProvider="target">
+                                <rect key="frame" x="51.5" y="0.0" width="217" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PN3-cJ-gly">
+                                    <rect key="frame" x="0.0" y="0.0" width="217" height="328"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-yp-Agh">
+                                            <rect key="frame" x="98.5" y="90.5" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-vd-HWZ">
+                                            <rect key="frame" x="8" y="0.0" width="201" height="201"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hAK-vd-HWZ" secondAttribute="height" multiplier="1:1" id="f8V-fa-1RO"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Asc-2c-g80">
+                                            <rect key="frame" x="16" y="201" width="193" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-Xw-QVk">
+                                            <rect key="frame" x="16" y="218" width="29" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Asc-2c-g80" secondAttribute="trailing" constant="8" id="ASr-lX-oNH"/>
+                                        <constraint firstItem="Asc-2c-g80" firstAttribute="leading" secondItem="hAK-vd-HWZ" secondAttribute="leading" constant="8" id="F1C-yS-eRX"/>
+                                        <constraint firstItem="hAK-vd-HWZ" firstAttribute="centerX" secondItem="PN3-cJ-gly" secondAttribute="centerX" id="F2o-Fh-ZUy"/>
+                                        <constraint firstItem="f7n-Xw-QVk" firstAttribute="leading" secondItem="Asc-2c-g80" secondAttribute="leading" id="WG6-y5-BGH"/>
+                                        <constraint firstItem="RK1-yp-Agh" firstAttribute="centerX" secondItem="hAK-vd-HWZ" secondAttribute="centerX" id="dpa-WK-Qup"/>
+                                        <constraint firstItem="Asc-2c-g80" firstAttribute="top" secondItem="hAK-vd-HWZ" secondAttribute="bottom" id="h9h-Dh-jdq"/>
+                                        <constraint firstItem="f7n-Xw-QVk" firstAttribute="top" secondItem="Asc-2c-g80" secondAttribute="bottom" id="jsy-8T-yWX"/>
+                                        <constraint firstItem="hAK-vd-HWZ" firstAttribute="top" secondItem="PN3-cJ-gly" secondAttribute="top" id="o14-4c-b3m"/>
+                                        <constraint firstItem="hAK-vd-HWZ" firstAttribute="leading" secondItem="PN3-cJ-gly" secondAttribute="leading" constant="8" id="sAm-nf-dQ5"/>
+                                        <constraint firstItem="RK1-yp-Agh" firstAttribute="centerY" secondItem="hAK-vd-HWZ" secondAttribute="centerY" id="zs1-J0-KXB"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="217" height="328"/>
+                                <connections>
+                                    <outlet property="albumImageView" destination="hAK-vd-HWZ" id="42H-U3-m3k"/>
+                                    <outlet property="albumReleaseYearLabel" destination="f7n-Xw-QVk" id="8Du-QI-c5s"/>
+                                    <outlet property="albumTitleLabel" destination="Asc-2c-g80" id="BGT-OC-ymr"/>
+                                    <outlet property="spinner" destination="RK1-yp-Agh" id="U1I-tu-J89"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ONJ-s4-GZp" id="wak-RR-LIw"/>
+                            <outlet property="delegate" destination="ONJ-s4-GZp" id="bBH-RV-exp"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3Q-Z5-vqN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-624.375" y="-5.28169014084507"/>
+        </scene>
+    </scenes>
+</document>

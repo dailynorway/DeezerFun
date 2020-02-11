@@ -13,6 +13,7 @@ protocol SearchViewControllerProtocol: class {
     func refreshTable()
     func startLoading()
     func stopLoading()
+    func navigateToAlbums(for artist: Artist)
 }
 
 class SearchPresenter {
@@ -67,5 +68,9 @@ class SearchPresenter {
                 }
             }
         })
+    }
+    
+    func selectArtistRequest(index: Int) {
+        viewController.navigateToAlbums(for: dataSource.artists[index])
     }
 }
