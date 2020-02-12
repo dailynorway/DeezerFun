@@ -27,7 +27,7 @@ class SearchViewController: UITableViewController {
     
     // MARK: Private
     private func prepareUiElements() {
-        title = "Search Artists"
+        title = NSLocalizedString("Search Artists", comment: "")
         tableView.dataSource = presenter.dataSource
         tableView.tableFooterView = UIView()
         searchController = UISearchController()
@@ -83,7 +83,7 @@ extension SearchViewController: SearchViewControllerProtocol {
     }
     
     func displayErrorMessage(_ message: String) {
-        presentOkAlertWithTitleAndMessage(title: "Error", message: message)
+        presentOkAlertWithTitleAndMessage(title: NSLocalizedString("Error", comment: ""), message: message)
     }
 }
 

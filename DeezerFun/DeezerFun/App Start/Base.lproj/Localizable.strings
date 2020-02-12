@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  DeezerFun
+
+  Created by Erick Vavretchek on 12/2/20.
+  Copyright © 2020 Erick Vavretchek. All rights reserved.
+*/
+
+"No Internet Connection" = "No Internet Connection";
+"Please check your settings." = "Please check your settings.";
+"OK" = "OK";
+"API did not return data" = "API did not return data";
+"Search Artists" = "Search Artists";
+"Error" = "Error";
+"Release Year" = "Release Year";
+"Volume" = "Volume";

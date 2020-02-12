@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D7DFE2923F35F81007C29DA /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */; };
+		8D7DFE2F23F36F18007C29DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D7DFE2D23F36F18007C29DA /* Localizable.strings */; };
+		8D7DFE3323F3740E007C29DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D7DFE3123F3740E007C29DA /* InfoPlist.strings */; };
 		8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45523F043380012A1FC /* AppDelegate.swift */; };
 		8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45723F043380012A1FC /* SceneDelegate.swift */; };
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
@@ -77,6 +79,14 @@
 
 /* Begin PBXFileReference section */
 		8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		8D7DFE2E23F36F18007C29DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "DeezerFun/App Start/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8D7DFE3223F3740E007C29DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "App Start/Base.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8D7DFE3423F374AD007C29DA /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8D7DFE3523F374AD007C29DA /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = "App Start/nb.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8D7DFE3623F374AD007C29DA /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = "DeezerFun/App Start/nb.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8D7DFE3723F374BB007C29DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8D7DFE3823F374BB007C29DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "App Start/pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8D7DFE3923F374BB007C29DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "DeezerFun/App Start/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8D83D45223F043380012A1FC /* Deezer Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deezer Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D45523F043380012A1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D83D45723F043380012A1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +205,8 @@
 				8D85101C23F1B235009C1800 /* Utils */,
 				8D83D46323F043390012A1FC /* Info.plist */,
 				8D83D45E23F043390012A1FC /* Assets.xcassets */,
+				8D7DFE3123F3740E007C29DA /* InfoPlist.strings */,
+				8D7DFE2D23F36F18007C29DA /* Localizable.strings */,
 			);
 			path = DeezerFun;
 			sourceTree = "<group>";
@@ -446,6 +458,8 @@
 			knownRegions = (
 				en,
 				Base,
+				nb,
+				"pt-BR",
 			);
 			mainGroup = 8D83D44923F043380012A1FC;
 			productRefGroup = 8D83D45323F043380012A1FC /* Products */;
@@ -464,8 +478,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D85102A23F29E84009C1800 /* Albums.storyboard in Resources */,
+				8D7DFE3323F3740E007C29DA /* InfoPlist.strings in Resources */,
 				8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */,
 				8D85104723F2FD08009C1800 /* TrackHeaderView.xib in Resources */,
+				8D7DFE2F23F36F18007C29DA /* Localizable.strings in Resources */,
 				8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */,
 				8D85103D23F2DF7C009C1800 /* Tracks.storyboard in Resources */,
 				8D85101323F1A2BC009C1800 /* Search.storyboard in Resources */,
@@ -557,10 +573,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8D7DFE2D23F36F18007C29DA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D7DFE2E23F36F18007C29DA /* Base */,
+				8D7DFE3623F374AD007C29DA /* nb */,
+				8D7DFE3923F374BB007C29DA /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8D7DFE3123F3740E007C29DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D7DFE3223F3740E007C29DA /* Base */,
+				8D7DFE3523F374AD007C29DA /* nb */,
+				8D7DFE3823F374BB007C29DA /* pt-BR */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		8D83D46023F043390012A1FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8D83D46123F043390012A1FC /* Base */,
+				8D7DFE3423F374AD007C29DA /* nb */,
+				8D7DFE3723F374BB007C29DA /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -572,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -632,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

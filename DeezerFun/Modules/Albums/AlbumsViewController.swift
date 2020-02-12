@@ -58,7 +58,7 @@ extension AlbumsViewController: AlbumsViewControllerProtocol {
     func startLoading() { activityIndicator.isHidden = false }
     func stopLoading() { activityIndicator.isHidden = true }
     func refreshCollection() { collectionView.reloadData() }
-    func displayErrorMessage(_ message: String) { presentOkAlertWithTitleAndMessage(title: "Error", message: message) }
+    func displayErrorMessage(_ message: String) { presentOkAlertWithTitleAndMessage(title: NSLocalizedString("Error", comment: ""), message: message) }
     
     func navigateToAlbum(album: Album) {
         let vc = TracksViewController.instantiate()

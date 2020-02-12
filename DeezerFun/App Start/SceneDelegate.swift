@@ -61,8 +61,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func displayNoConnectionMessage() {
-        let alert = UIAlertController(title: "No Internet Connection", message:"Please check your settings.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: NSLocalizedString("No Internet Connection", comment: ""),
+                                      message: NSLocalizedString("Please check your settings.", comment: ""),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: nil))
         DispatchQueue.main.async {
             self.window?.rootViewController?.present(alert, animated: true, completion: nil)
         }

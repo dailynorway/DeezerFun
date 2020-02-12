@@ -78,7 +78,8 @@ class TracksViewController: UITableViewController, Storyboarded {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: TrackHeaderView.reuseIdentifier) as? TrackHeaderView else {
             fatalError("Could not dequeue table section header, this should never happen!")
         }
-        headerView.volumeLabel.text = "Volume \(section + 1)"
+        let volumeLocalized = NSLocalizedString("Volume", comment: "")
+        headerView.volumeLabel.text = "\(volumeLocalized) \(section + 1)"
         return headerView
     }
     
@@ -92,7 +93,7 @@ extension TracksViewController: TracksViewControllerProtocol {
     func stopLoading() { activityIndicator.isHidden = true }
     func refreshTable() { tableView.reloadData() }
     func setTitle(to title: String) { self.title = title }
-    func displayErrorMessage(_ message: String) { presentOkAlertWithTitleAndMessage(title: "Error", message: message) }
+    func displayErrorMessage(_ message: String) { presentOkAlertWithTitleAndMessage(title: NSLocalizedString("Error", comment: ""), message: message) }
 
     func displayPlayerController(album: Album, track: Track) {
         let vc = AVPlayerViewController()
