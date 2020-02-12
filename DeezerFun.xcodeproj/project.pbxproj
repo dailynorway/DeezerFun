@@ -7,13 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7DFE2923F35F81007C29DA /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */; };
+		8D7DFE2F23F36F18007C29DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D7DFE2D23F36F18007C29DA /* Localizable.strings */; };
+		8D7DFE3323F3740E007C29DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D7DFE3123F3740E007C29DA /* InfoPlist.strings */; };
 		8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45523F043380012A1FC /* AppDelegate.swift */; };
 		8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45723F043380012A1FC /* SceneDelegate.swift */; };
-		8D83D45A23F043380012A1FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D45923F043380012A1FC /* ViewController.swift */; };
-		8D83D45D23F043380012A1FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45B23F043380012A1FC /* Main.storyboard */; };
 		8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D45E23F043390012A1FC /* Assets.xcassets */; };
 		8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D83D46023F043390012A1FC /* LaunchScreen.storyboard */; };
-		8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D46C23F043390012A1FC /* DeezerFunTests.swift */; };
+		8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D47A23F079840012A1FC /* DeezerApiClient.swift */; };
+		8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */; };
+		8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */; };
+		8D83D48323F07B880012A1FC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48223F07B880012A1FC /* Artist.swift */; };
+		8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */; };
+		8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48723F0BE910012A1FC /* DeezerApiError.swift */; };
+		8D83D48A23F0BEB90012A1FC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */; };
+		8D850FE723F14AB3009C1800 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FE623F14AB3009C1800 /* HttpMethod.swift */; };
+		8D850FE923F14D8B009C1800 /* DeezerApiGetAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FE823F14D8B009C1800 /* DeezerApiGetAlbums.swift */; };
+		8D850FEB23F14DB5009C1800 /* DeezerApiAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FEA23F14DB5009C1800 /* DeezerApiAlbum.swift */; };
+		8D850FED23F14E6E009C1800 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FEC23F14E6E009C1800 /* Album.swift */; };
+		8D850FEF23F1553D009C1800 /* DeezerApiTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */; };
+		8D850FF123F1560F009C1800 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF023F1560F009C1800 /* Track.swift */; };
+		8D850FF323F1563C009C1800 /* DeezerApiGetTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */; };
+		8D850FF523F169A0009C1800 /* DeezerApiClientArtistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FF423F169A0009C1800 /* DeezerApiClientArtistsTests.swift */; };
+		8D850FF823F171D8009C1800 /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FF723F171D8009C1800 /* Artists.json */; };
+		8D850FFB23F173BB009C1800 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D850FFA23F173BB009C1800 /* Bundle+extension.swift */; };
+		8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */; };
+		8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D850FFE23F18961009C1800 /* DeezerNativeError.json */; };
+		8D85100123F18C97009C1800 /* Albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100023F18C97009C1800 /* Albums.json */; };
+		8D85100523F18DBC009C1800 /* AlbumsBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */; };
+		8D85100723F192C7009C1800 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100623F192C7009C1800 /* Tracks.json */; };
+		8D85100923F19426009C1800 /* TracksBadlyFormatted.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D85100823F19426009C1800 /* TracksBadlyFormatted.json */; };
+		8D85100B23F194FA009C1800 /* DeezerApiClientAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */; };
+		8D85100D23F19781009C1800 /* DeezerApiClientTracksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100C23F19781009C1800 /* DeezerApiClientTracksTests.swift */; };
+		8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85100E23F19A32009C1800 /* HttpClient.swift */; };
+		8D85101323F1A2BC009C1800 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85101223F1A2BC009C1800 /* Search.storyboard */; };
+		8D85101523F1A39A009C1800 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101423F1A39A009C1800 /* SearchViewController.swift */; };
+		8D85101723F1A3BD009C1800 /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101623F1A3BD009C1800 /* SearchDataSource.swift */; };
+		8D85101923F1A420009C1800 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101823F1A420009C1800 /* SearchCell.swift */; };
+		8D85101B23F1A633009C1800 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101A23F1A633009C1800 /* SearchPresenter.swift */; };
+		8D85101E23F1B253009C1800 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101D23F1B253009C1800 /* UIImageView+extension.swift */; };
+		8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */; };
+		8D85102723F1DB4D009C1800 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */; };
+		8D85102A23F29E84009C1800 /* Albums.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85102923F29E84009C1800 /* Albums.storyboard */; };
+		8D85102C23F29E9D009C1800 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102B23F29E9D009C1800 /* AlbumsViewController.swift */; };
+		8D85102E23F29EAF009C1800 /* AlbumsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102D23F29EAF009C1800 /* AlbumsPresenter.swift */; };
+		8D85103023F29EBD009C1800 /* AlbumsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85102F23F29EBD009C1800 /* AlbumsDataSource.swift */; };
+		8D85103223F29EDA009C1800 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103123F29EDA009C1800 /* AlbumCell.swift */; };
+		8D85103423F2A656009C1800 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103323F2A656009C1800 /* Storyboarded.swift */; };
+		8D85103623F2B407009C1800 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103523F2B407009C1800 /* String+extension.swift */; };
+		8D85103823F2C2F3009C1800 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103723F2C2F3009C1800 /* Date+extension.swift */; };
+		8D85103A23F2D61A009C1800 /* AlbumsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */; };
+		8D85103D23F2DF7C009C1800 /* Tracks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D85103C23F2DF7C009C1800 /* Tracks.storyboard */; };
+		8D85103F23F2DF90009C1800 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85103E23F2DF90009C1800 /* TracksViewController.swift */; };
+		8D85104123F2DF9C009C1800 /* TracksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104023F2DF9C009C1800 /* TracksPresenter.swift */; };
+		8D85104323F2DFA8009C1800 /* TracksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104223F2DFA8009C1800 /* TracksDataSource.swift */; };
+		8D85104523F2DFBF009C1800 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104423F2DFBF009C1800 /* TrackCell.swift */; };
+		8D85104723F2FD08009C1800 /* TrackHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D85104623F2FD08009C1800 /* TrackHeaderView.xib */; };
+		8D85104923F2FD8E009C1800 /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104823F2FD8E009C1800 /* TrackHeaderView.swift */; };
+		8D85104D23F3335A009C1800 /* TracksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85104C23F3335A009C1800 /* TracksPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +78,74 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D83D45223F043380012A1FC /* DeezerFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		8D7DFE2E23F36F18007C29DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "DeezerFun/App Start/Base.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8D7DFE3223F3740E007C29DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = "App Start/Base.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8D7DFE3423F374AD007C29DA /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		8D7DFE3523F374AD007C29DA /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = "App Start/nb.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8D7DFE3623F374AD007C29DA /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = "DeezerFun/App Start/nb.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8D7DFE3723F374BB007C29DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8D7DFE3823F374BB007C29DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "App Start/pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8D7DFE3923F374BB007C29DA /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "DeezerFun/App Start/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8D83D45223F043380012A1FC /* Deezer Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deezer Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D83D45523F043380012A1FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D83D45723F043380012A1FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D83D45923F043380012A1FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8D83D45C23F043380012A1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D83D45E23F043390012A1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D83D46123F043390012A1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D83D46323F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D83D46823F043390012A1FC /* DeezerFunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerFunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D83D46C23F043390012A1FC /* DeezerFunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerFunTests.swift; sourceTree = "<group>"; };
 		8D83D46E23F043390012A1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D83D47A23F079840012A1FC /* DeezerApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClient.swift; sourceTree = "<group>"; };
+		8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiSearchArtist.swift; sourceTree = "<group>"; };
+		8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiArtist.swift; sourceTree = "<group>"; };
+		8D83D48223F07B880012A1FC /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerNativeError.swift; sourceTree = "<group>"; };
+		8D83D48723F0BE910012A1FC /* DeezerApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiError.swift; sourceTree = "<group>"; };
+		8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		8D850FE623F14AB3009C1800 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		8D850FE823F14D8B009C1800 /* DeezerApiGetAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiGetAlbums.swift; sourceTree = "<group>"; };
+		8D850FEA23F14DB5009C1800 /* DeezerApiAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiAlbum.swift; sourceTree = "<group>"; };
+		8D850FEC23F14E6E009C1800 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiTrack.swift; sourceTree = "<group>"; };
+		8D850FF023F1560F009C1800 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiGetTracks.swift; sourceTree = "<group>"; };
+		8D850FF423F169A0009C1800 /* DeezerApiClientArtistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClientArtistsTests.swift; sourceTree = "<group>"; };
+		8D850FF723F171D8009C1800 /* Artists.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
+		8D850FFA23F173BB009C1800 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
+		8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ArtistsBadlyFormatted.json; sourceTree = "<group>"; };
+		8D850FFE23F18961009C1800 /* DeezerNativeError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeezerNativeError.json; sourceTree = "<group>"; };
+		8D85100023F18C97009C1800 /* Albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Albums.json; sourceTree = "<group>"; };
+		8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AlbumsBadlyFormatted.json; sourceTree = "<group>"; };
+		8D85100623F192C7009C1800 /* Tracks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
+		8D85100823F19426009C1800 /* TracksBadlyFormatted.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TracksBadlyFormatted.json; sourceTree = "<group>"; };
+		8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClientAlbumTests.swift; sourceTree = "<group>"; };
+		8D85100C23F19781009C1800 /* DeezerApiClientTracksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerApiClientTracksTests.swift; sourceTree = "<group>"; };
+		8D85100E23F19A32009C1800 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		8D85101223F1A2BC009C1800 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		8D85101423F1A39A009C1800 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8D85101623F1A3BD009C1800 /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
+		8D85101823F1A420009C1800 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		8D85101A23F1A633009C1800 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		8D85101D23F1B253009C1800 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+extension.swift"; sourceTree = "<group>"; };
+		8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		8D85102923F29E84009C1800 /* Albums.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Albums.storyboard; sourceTree = "<group>"; };
+		8D85102B23F29E9D009C1800 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		8D85102D23F29EAF009C1800 /* AlbumsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsPresenter.swift; sourceTree = "<group>"; };
+		8D85102F23F29EBD009C1800 /* AlbumsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDataSource.swift; sourceTree = "<group>"; };
+		8D85103123F29EDA009C1800 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		8D85103323F2A656009C1800 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		8D85103523F2B407009C1800 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		8D85103723F2C2F3009C1800 /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsPresenterTests.swift; sourceTree = "<group>"; };
+		8D85103C23F2DF7C009C1800 /* Tracks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tracks.storyboard; sourceTree = "<group>"; };
+		8D85103E23F2DF90009C1800 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		8D85104023F2DF9C009C1800 /* TracksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksPresenter.swift; sourceTree = "<group>"; };
+		8D85104223F2DFA8009C1800 /* TracksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksDataSource.swift; sourceTree = "<group>"; };
+		8D85104423F2DFBF009C1800 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		8D85104623F2FD08009C1800 /* TrackHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackHeaderView.xib; sourceTree = "<group>"; };
+		8D85104823F2FD8E009C1800 /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
+		8D85104C23F3335A009C1800 /* TracksPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +166,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D7DFE2723F35F33007C29DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8D85101F23F1D5EF009C1800 /* UISearchBar+extension.swift */,
+				8D85101D23F1B253009C1800 /* UIImageView+extension.swift */,
+				8D85103523F2B407009C1800 /* String+extension.swift */,
+				8D85103723F2C2F3009C1800 /* Date+extension.swift */,
+				8D7DFE2823F35F81007C29DA /* UIViewController+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8D83D44923F043380012A1FC = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +190,7 @@
 		8D83D45323F043380012A1FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D83D45223F043380012A1FC /* DeezerFun.app */,
+				8D83D45223F043380012A1FC /* Deezer Fun.app */,
 				8D83D46823F043390012A1FC /* DeezerFunTests.xctest */,
 			);
 			name = Products;
@@ -79,13 +199,14 @@
 		8D83D45423F043380012A1FC /* DeezerFun */ = {
 			isa = PBXGroup;
 			children = (
-				8D83D45523F043380012A1FC /* AppDelegate.swift */,
-				8D83D45723F043380012A1FC /* SceneDelegate.swift */,
-				8D83D45923F043380012A1FC /* ViewController.swift */,
-				8D83D45B23F043380012A1FC /* Main.storyboard */,
-				8D83D45E23F043390012A1FC /* Assets.xcassets */,
-				8D83D46023F043390012A1FC /* LaunchScreen.storyboard */,
+				8D83D47723F077450012A1FC /* App Start */,
+				8D83D47823F0776B0012A1FC /* Data Layer */,
+				8D85101023F1A298009C1800 /* Modules */,
+				8D85101C23F1B235009C1800 /* Utils */,
 				8D83D46323F043390012A1FC /* Info.plist */,
+				8D83D45E23F043390012A1FC /* Assets.xcassets */,
+				8D7DFE3123F3740E007C29DA /* InfoPlist.strings */,
+				8D7DFE2D23F36F18007C29DA /* Localizable.strings */,
 			);
 			path = DeezerFun;
 			sourceTree = "<group>";
@@ -93,10 +214,184 @@
 		8D83D46B23F043390012A1FC /* DeezerFunTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D83D46C23F043390012A1FC /* DeezerFunTests.swift */,
+				8D85102423F1DB1E009C1800 /* Network */,
+				8D85102523F1DB30009C1800 /* Presenters */,
+				8D850FF923F173AC009C1800 /* Utils */,
+				8D850FF623F171C0009C1800 /* Stubs */,
 				8D83D46E23F043390012A1FC /* Info.plist */,
 			);
 			path = DeezerFunTests;
+			sourceTree = "<group>";
+		};
+		8D83D47723F077450012A1FC /* App Start */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D45523F043380012A1FC /* AppDelegate.swift */,
+				8D83D45723F043380012A1FC /* SceneDelegate.swift */,
+				8D83D46023F043390012A1FC /* LaunchScreen.storyboard */,
+			);
+			path = "App Start";
+			sourceTree = "<group>";
+		};
+		8D83D47823F0776B0012A1FC /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47C23F079CD0012A1FC /* Models */,
+				8D83D47923F0777F0012A1FC /* Network Clients */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		8D83D47923F0777F0012A1FC /* Network Clients */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47A23F079840012A1FC /* DeezerApiClient.swift */,
+				8D85100E23F19A32009C1800 /* HttpClient.swift */,
+			);
+			path = "Network Clients";
+			sourceTree = "<group>";
+		};
+		8D83D47C23F079CD0012A1FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D850FE523F14A98009C1800 /* Network */,
+				8D83D48623F0BE6E0012A1FC /* Error Handling */,
+				8D83D48223F07B880012A1FC /* Artist.swift */,
+				8D850FEC23F14E6E009C1800 /* Album.swift */,
+				8D850FF023F1560F009C1800 /* Track.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D83D47D23F07A000012A1FC /* Deezer Api */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47E23F07A350012A1FC /* DeezerApiSearchArtist.swift */,
+				8D83D48023F07AE60012A1FC /* DeezerApiArtist.swift */,
+				8D850FE823F14D8B009C1800 /* DeezerApiGetAlbums.swift */,
+				8D850FEA23F14DB5009C1800 /* DeezerApiAlbum.swift */,
+				8D850FF223F1563C009C1800 /* DeezerApiGetTracks.swift */,
+				8D850FEE23F1553D009C1800 /* DeezerApiTrack.swift */,
+			);
+			path = "Deezer Api";
+			sourceTree = "<group>";
+		};
+		8D83D48623F0BE6E0012A1FC /* Error Handling */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D48723F0BE910012A1FC /* DeezerApiError.swift */,
+				8D83D48423F0A1720012A1FC /* DeezerNativeError.swift */,
+				8D83D48923F0BEB90012A1FC /* ErrorHandler.swift */,
+			);
+			path = "Error Handling";
+			sourceTree = "<group>";
+		};
+		8D850FE523F14A98009C1800 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8D83D47D23F07A000012A1FC /* Deezer Api */,
+				8D850FE623F14AB3009C1800 /* HttpMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8D850FF623F171C0009C1800 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				8D850FF723F171D8009C1800 /* Artists.json */,
+				8D850FFC23F185CE009C1800 /* ArtistsBadlyFormatted.json */,
+				8D850FFE23F18961009C1800 /* DeezerNativeError.json */,
+				8D85100023F18C97009C1800 /* Albums.json */,
+				8D85100423F18DBC009C1800 /* AlbumsBadlyFormatted.json */,
+				8D85100623F192C7009C1800 /* Tracks.json */,
+				8D85100823F19426009C1800 /* TracksBadlyFormatted.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		8D850FF923F173AC009C1800 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8D850FFA23F173BB009C1800 /* Bundle+extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8D85101023F1A298009C1800 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8D85101123F1A2A7009C1800 /* Search */,
+				8D85102823F29E55009C1800 /* Albums */,
+				8D85103B23F2DF71009C1800 /* Tracks */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8D85101123F1A2A7009C1800 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8D85101223F1A2BC009C1800 /* Search.storyboard */,
+				8D85101423F1A39A009C1800 /* SearchViewController.swift */,
+				8D85101A23F1A633009C1800 /* SearchPresenter.swift */,
+				8D85101623F1A3BD009C1800 /* SearchDataSource.swift */,
+				8D85101823F1A420009C1800 /* SearchCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8D85101C23F1B235009C1800 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8D7DFE2723F35F33007C29DA /* Extensions */,
+				8D85103323F2A656009C1800 /* Storyboarded.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8D85102423F1DB1E009C1800 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8D850FF423F169A0009C1800 /* DeezerApiClientArtistsTests.swift */,
+				8D85100A23F194FA009C1800 /* DeezerApiClientAlbumTests.swift */,
+				8D85100C23F19781009C1800 /* DeezerApiClientTracksTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8D85102523F1DB30009C1800 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				8D85102623F1DB4D009C1800 /* SearchPresenterTests.swift */,
+				8D85103923F2D61A009C1800 /* AlbumsPresenterTests.swift */,
+				8D85104C23F3335A009C1800 /* TracksPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		8D85102823F29E55009C1800 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				8D85102923F29E84009C1800 /* Albums.storyboard */,
+				8D85102B23F29E9D009C1800 /* AlbumsViewController.swift */,
+				8D85102D23F29EAF009C1800 /* AlbumsPresenter.swift */,
+				8D85102F23F29EBD009C1800 /* AlbumsDataSource.swift */,
+				8D85103123F29EDA009C1800 /* AlbumCell.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		8D85103B23F2DF71009C1800 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				8D85103C23F2DF7C009C1800 /* Tracks.storyboard */,
+				8D85103E23F2DF90009C1800 /* TracksViewController.swift */,
+				8D85104023F2DF9C009C1800 /* TracksPresenter.swift */,
+				8D85104223F2DFA8009C1800 /* TracksDataSource.swift */,
+				8D85104423F2DFBF009C1800 /* TrackCell.swift */,
+				8D85104623F2FD08009C1800 /* TrackHeaderView.xib */,
+				8D85104823F2FD8E009C1800 /* TrackHeaderView.swift */,
+			);
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,7 +411,7 @@
 			);
 			name = DeezerFun;
 			productName = DeezerFun;
-			productReference = 8D83D45223F043380012A1FC /* DeezerFun.app */;
+			productReference = 8D83D45223F043380012A1FC /* Deezer Fun.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8D83D46723F043390012A1FC /* DeezerFunTests */ = {
@@ -163,6 +458,8 @@
 			knownRegions = (
 				en,
 				Base,
+				nb,
+				"pt-BR",
 			);
 			mainGroup = 8D83D44923F043380012A1FC;
 			productRefGroup = 8D83D45323F043380012A1FC /* Products */;
@@ -180,9 +477,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D85102A23F29E84009C1800 /* Albums.storyboard in Resources */,
+				8D7DFE3323F3740E007C29DA /* InfoPlist.strings in Resources */,
 				8D83D46223F043390012A1FC /* LaunchScreen.storyboard in Resources */,
+				8D85104723F2FD08009C1800 /* TrackHeaderView.xib in Resources */,
+				8D7DFE2F23F36F18007C29DA /* Localizable.strings in Resources */,
 				8D83D45F23F043390012A1FC /* Assets.xcassets in Resources */,
-				8D83D45D23F043380012A1FC /* Main.storyboard in Resources */,
+				8D85103D23F2DF7C009C1800 /* Tracks.storyboard in Resources */,
+				8D85101323F1A2BC009C1800 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +492,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D850FF823F171D8009C1800 /* Artists.json in Resources */,
+				8D85100523F18DBC009C1800 /* AlbumsBadlyFormatted.json in Resources */,
+				8D850FFF23F18961009C1800 /* DeezerNativeError.json in Resources */,
+				8D850FFD23F185CE009C1800 /* ArtistsBadlyFormatted.json in Resources */,
+				8D85100923F19426009C1800 /* TracksBadlyFormatted.json in Resources */,
+				8D85100123F18C97009C1800 /* Albums.json in Resources */,
+				8D85100723F192C7009C1800 /* Tracks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +509,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D83D45A23F043380012A1FC /* ViewController.swift in Sources */,
+				8D85101B23F1A633009C1800 /* SearchPresenter.swift in Sources */,
+				8D83D48123F07AE60012A1FC /* DeezerApiArtist.swift in Sources */,
+				8D85104923F2FD8E009C1800 /* TrackHeaderView.swift in Sources */,
+				8D83D47B23F079840012A1FC /* DeezerApiClient.swift in Sources */,
+				8D85101523F1A39A009C1800 /* SearchViewController.swift in Sources */,
+				8D85103023F29EBD009C1800 /* AlbumsDataSource.swift in Sources */,
+				8D83D48523F0A1720012A1FC /* DeezerNativeError.swift in Sources */,
+				8D85100F23F19A32009C1800 /* HttpClient.swift in Sources */,
+				8D85103823F2C2F3009C1800 /* Date+extension.swift in Sources */,
+				8D850FE923F14D8B009C1800 /* DeezerApiGetAlbums.swift in Sources */,
+				8D85104523F2DFBF009C1800 /* TrackCell.swift in Sources */,
+				8D85103223F29EDA009C1800 /* AlbumCell.swift in Sources */,
+				8D850FED23F14E6E009C1800 /* Album.swift in Sources */,
+				8D85103623F2B407009C1800 /* String+extension.swift in Sources */,
+				8D85102C23F29E9D009C1800 /* AlbumsViewController.swift in Sources */,
+				8D850FEB23F14DB5009C1800 /* DeezerApiAlbum.swift in Sources */,
+				8D850FF323F1563C009C1800 /* DeezerApiGetTracks.swift in Sources */,
+				8D85101923F1A420009C1800 /* SearchCell.swift in Sources */,
+				8D85104123F2DF9C009C1800 /* TracksPresenter.swift in Sources */,
+				8D850FE723F14AB3009C1800 /* HttpMethod.swift in Sources */,
+				8D7DFE2923F35F81007C29DA /* UIViewController+extension.swift in Sources */,
+				8D83D47F23F07A350012A1FC /* DeezerApiSearchArtist.swift in Sources */,
+				8D83D48823F0BE910012A1FC /* DeezerApiError.swift in Sources */,
+				8D85102E23F29EAF009C1800 /* AlbumsPresenter.swift in Sources */,
 				8D83D45623F043380012A1FC /* AppDelegate.swift in Sources */,
+				8D850FF123F1560F009C1800 /* Track.swift in Sources */,
+				8D85104323F2DFA8009C1800 /* TracksDataSource.swift in Sources */,
+				8D85101723F1A3BD009C1800 /* SearchDataSource.swift in Sources */,
+				8D83D48A23F0BEB90012A1FC /* ErrorHandler.swift in Sources */,
+				8D850FEF23F1553D009C1800 /* DeezerApiTrack.swift in Sources */,
 				8D83D45823F043380012A1FC /* SceneDelegate.swift in Sources */,
+				8D85102023F1D5EF009C1800 /* UISearchBar+extension.swift in Sources */,
+				8D85101E23F1B253009C1800 /* UIImageView+extension.swift in Sources */,
+				8D83D48323F07B880012A1FC /* Artist.swift in Sources */,
+				8D85103423F2A656009C1800 /* Storyboarded.swift in Sources */,
+				8D85103F23F2DF90009C1800 /* TracksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +552,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D83D46D23F043390012A1FC /* DeezerFunTests.swift in Sources */,
+				8D85104D23F3335A009C1800 /* TracksPresenterTests.swift in Sources */,
+				8D85100D23F19781009C1800 /* DeezerApiClientTracksTests.swift in Sources */,
+				8D85102723F1DB4D009C1800 /* SearchPresenterTests.swift in Sources */,
+				8D85103A23F2D61A009C1800 /* AlbumsPresenterTests.swift in Sources */,
+				8D850FF523F169A0009C1800 /* DeezerApiClientArtistsTests.swift in Sources */,
+				8D850FFB23F173BB009C1800 /* Bundle+extension.swift in Sources */,
+				8D85100B23F194FA009C1800 /* DeezerApiClientAlbumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,18 +573,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8D83D45B23F043380012A1FC /* Main.storyboard */ = {
+		8D7DFE2D23F36F18007C29DA /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8D83D45C23F043380012A1FC /* Base */,
+				8D7DFE2E23F36F18007C29DA /* Base */,
+				8D7DFE3623F374AD007C29DA /* nb */,
+				8D7DFE3923F374BB007C29DA /* pt-BR */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8D7DFE3123F3740E007C29DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D7DFE3223F3740E007C29DA /* Base */,
+				8D7DFE3523F374AD007C29DA /* nb */,
+				8D7DFE3823F374BB007C29DA /* pt-BR */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		8D83D46023F043390012A1FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8D83D46123F043390012A1FC /* Base */,
+				8D7DFE3423F374AD007C29DA /* nb */,
+				8D7DFE3723F374BB007C29DA /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -248,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -308,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -370,7 +734,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.vavre.DeezerFun;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deezer Fun";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -388,7 +752,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.vavre.DeezerFun;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Deezer Fun";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -412,7 +776,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeezerFun.app/DeezerFun";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deezer Fun.app/Deezer Fun";
 			};
 			name = Debug;
 		};
@@ -434,7 +798,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeezerFun.app/DeezerFun";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deezer Fun.app/Deezer Fun";
 			};
 			name = Release;
 		};

@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "id": 3135553,
+            "title": "One More Time",
+            "title_short": "One More Time",
+            "track_position": 1,
+            "duration": 320,
+            "preview": "https://cdns-preview-e.dzcdn.net/stream/c-e77d23e0c8ed7567a507a6d1b6a9ca1b-7.mp3",
+            "disk_number": 1
+        },
+        {
+            "id": 3135554,
+            "title": "Aerodynamic",
+            "title_short": "Aerodynamic",
+            "track_position": 2,
+            "duration": 212,
+            "preview": "https://cdns-preview-b.dzcdn.net/stream/c-b2e0166bba75a78251d6dca9c9c3b41a-5.mp3",
+            "disk_number": 1
+        },
+        {
+            "id": 3135555,
+            "title": "Digital Love",
+            "title_short": "Digital Love",
+            "track_position": 3,
+            "duration": 301,
+            "preview": "https://cdns-preview-0.dzcdn.net/stream/c-01ef0c4982c94b86c7c0e6b2a70dde4b-5.mp3",
+            "disk_number": 1
+        },
+        {
+            "id": 3135556,
+            "title": "Harder, Better, Faster, Stronger",
+            "title_short": "Harder, Better, Faster, Stronger",
+            "track_position": 4,
+            "duration": 224,
+            "preview": "https://cdns-preview-d.dzcdn.net/stream/c-deda7fa9316d9e9e880d2c6207e92260-5.mp3",
+            "disk_number": 1
+        }
+    ]
+}

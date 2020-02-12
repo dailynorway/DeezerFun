@@ -1,0 +1,7 @@
+{
+    "error": {
+        "type": "DeezerNativeError",
+        "message": "This is a Deezer Native Error",
+        "code": 123
+    }
+}
