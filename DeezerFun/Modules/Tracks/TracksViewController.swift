@@ -31,7 +31,6 @@ class TracksViewController: UITableViewController, Storyboarded {
         setHeaderImage()
         prepareTableView()
         addActivityIndicatorView()
-        
     }
     
     private func prepareTableView() {
@@ -45,6 +44,7 @@ class TracksViewController: UITableViewController, Storyboarded {
     private func setHeaderImage() {
         var imageSet = false
         let imageView = UIImageView()
+        imageView.frame.size.height = UIScreen.main.bounds.width
         imageView.contentMode = .scaleToFill
         let _ = imageView.downloadImage(from: presenter.album.coverBig) { [weak self] _ in
             imageSet = true
@@ -52,6 +52,7 @@ class TracksViewController: UITableViewController, Storyboarded {
         }
         if !imageSet {
             let spinner = UIActivityIndicatorView()
+            spinner.frame.size.height = UIScreen.main.bounds.width
             spinner.startAnimating()
             tableView.tableHeaderView = spinner
         }
@@ -77,7 +78,8 @@ class TracksViewController: UITableViewController, Storyboarded {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: TrackHeaderView.reuseIdentifier) as? TrackHeaderView else {
             fatalError("Could not dequeue table section header, this should never happen!")
         }
-        headerView.volumeLabel.text = "Volume \(section + 1)"
+        let volumeLocalized = NSLocalizedString("Volume", comment: "")
+        headerView.volumeLabel.text = "\(volumeLocalized) \(section + 1)"
         return headerView
     }
     
@@ -91,7 +93,8 @@ extension TracksViewController: TracksViewControllerProtocol {
     func stopLoading() { activityIndicator.isHidden = true }
     func refreshTable() { tableView.reloadData() }
     func setTitle(to title: String) { self.title = title }
-    
+    func displayErrorMessage(_ message: String) { presentOkAlertWithTitleAndMessage(title: NSLocalizedString("Error", comment: ""), message: message) }
+
     func displayPlayerController(album: Album, track: Track) {
         let vc = AVPlayerViewController()
         let bounds = UIScreen.main.bounds

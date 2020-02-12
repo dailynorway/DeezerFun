@@ -29,7 +29,8 @@ class AlbumCell: UICollectionViewCell {
         spinner.startAnimating()
         albumTitleLabel.text = album.title
         let releaseYear = album.releaseDate.toString(withDateFormat: "yyyy")
-        albumReleaseYearLabel.text = "Release Year \(releaseYear)"
+        let releaseYearLocalized = NSLocalizedString("Release Year", comment: "")
+        albumReleaseYearLabel.text = "\(releaseYearLocalized) \(releaseYear)"
         if task == nil {
             task = albumImageView.downloadImage(from: album.coverMedium)
         }

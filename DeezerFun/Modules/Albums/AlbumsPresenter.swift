@@ -14,6 +14,7 @@ protocol AlbumsViewControllerProtocol: class {
     func stopLoading()
     func refreshCollection()
     func navigateToAlbum(album: Album)
+    func displayErrorMessage(_ messsage: String)
 }
 
 class AlbumsPresenter {
@@ -56,7 +57,9 @@ class AlbumsPresenter {
                     self?.viewController.refreshCollection()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                DispatchQueue.main.async { [weak self] in
+                    self?.viewController.displayErrorMessage(error.localizedDescription)
+                }
             }
         }
     }

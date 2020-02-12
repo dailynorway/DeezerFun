@@ -20,14 +20,19 @@ class SearchViewController: UITableViewController {
         prepareUiElements()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        searchController.searchBar.searchTextField.becomeFirstResponder()
+    }
+    
     // MARK: Private
     private func prepareUiElements() {
-        title = "Search Artists"
+        title = NSLocalizedString("Search Artists", comment: "")
         tableView.dataSource = presenter.dataSource
         tableView.tableFooterView = UIView()
         searchController = UISearchController()
         searchController.automaticallyShowsCancelButton = true
-        searchController.searchBar.searchTextField.clearButtonMode = .never
+        searchController.searchBar.searchTextField.clearButtonMode = .always
         searchController.searchBar.searchTextField.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.barStyle = .default
@@ -50,7 +55,7 @@ extension SearchViewController: SearchViewControllerProtocol {
     func toggleEmptyStateImage() {
         if presenter.dataSource.artists.isEmpty {
             let imageView = UIImageView(image: UIImage(named: "empty_state"))
-            imageView.contentMode = .center
+            imageView.contentMode = .scaleAspectFill
             imageView.tintColor = .systemGray
             tableView.backgroundView = imageView
         } else {
@@ -76,11 +81,20 @@ extension SearchViewController: SearchViewControllerProtocol {
         vc.presenter = AlbumsPresenter(viewController: vc, artist: artist)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func displayErrorMessage(_ message: String) {
+        presentOkAlertWithTitleAndMessage(title: NSLocalizedString("Error", comment: ""), message: message)
+    }
 }
 
 // MARK: UITextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         presenter.searchArtistRequest(with: textField.text ?? "")
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        textField.text = ""
+        return true
     }
 }

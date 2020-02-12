@@ -14,6 +14,7 @@ protocol TracksViewControllerProtocol: class {
     func refreshTable()
     func setTitle(to title: String)
     func displayPlayerController(album: Album, track: Track)
+    func displayErrorMessage(_ messsage: String)
 }
 
 class TracksPresenter {
@@ -55,8 +56,9 @@ class TracksPresenter {
                     self?.viewController.refreshTable()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
-            }
+                DispatchQueue.main.async { [weak self] in
+                    self?.viewController.displayErrorMessage(error.localizedDescription)
+                }            }
         }
     }
     

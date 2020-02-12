@@ -17,7 +17,7 @@ enum DeezerApiError: Error {
     var localizedDescription: String {
         switch self {
         case .dataNotReceived:
-            return "API did not return data"
+            return NSLocalizedString("API did not return data", comment: "")
         case .urlSession(let error):
             return error.localizedDescription
         case .decoding(let error):

@@ -7,9 +7,10 @@
 //
 
 import XCTest
-@testable import DeezerFun
+@testable import Deezer_Fun
 
 fileprivate let loadingAlbumsExpectationDescription = "Loading Albums Expectation"
+fileprivate let errorDisplayedExpectationDescription = "Error Displayed Expectation"
 
 class AlbumsPresenterTests: XCTestCase {
 
@@ -35,6 +36,8 @@ class AlbumsPresenterTests: XCTestCase {
         loadingAlbumsExpectation.expectedFulfillmentCount = 2
         viewController.expectations.append(loadingAlbumsExpectation)
         wait(for: [loadingAlbumsExpectation], timeout: 1)
+        XCTAssert(viewController.stopLoadingCalled, "Spinner must stop after data is retrieved")
+        XCTAssert(viewController.refreshCollectionCalled, "Collection View must be refreshed after data is retrieved")
     }
     
     func testAlbumSelection() {
@@ -49,16 +52,30 @@ class AlbumsPresenterTests: XCTestCase {
         presenter.selectAlbumRequest(index: 0)
         XCTAssert(viewController.navigateToAlbumCalled)
     }
+    
+    func testFailToFetchData() {
+        apiClient.shouldFailRequest = true
+        presenter.viewDidLoad()
+        let errorDisplayedExpectation = self.expectation(description: errorDisplayedExpectationDescription)
+        viewController.expectations.append(errorDisplayedExpectation)
+        wait(for: [errorDisplayedExpectation], timeout: 1)
+        XCTAssert(viewController.displayErrorMessageCalled, "An error message must be displayed when network request fails")
+    }
 }
 
 fileprivate class DeezerApiClientMock: DeezerApiClient {
     let testBundle: Bundle
+    var shouldFailRequest = false
     init(testBundle: Bundle) { self.testBundle = testBundle }
     
     override func getAlbums(_ artistId: Int, completionHandler: @escaping (Result<[Album], DeezerApiError>) -> Void) {
-        let decodedAlbumsData = testBundle.decode(DeezerApiGetAlbums.self, from: "Albums.json")
-        let albums = decodedAlbumsData.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, coverBig: $0.coverBig, releaseDate: $0.releaseDate)}
-        completionHandler(Result.success(albums))
+        if shouldFailRequest {
+            completionHandler(Result.failure(.dataNotReceived))
+        } else {
+            let decodedAlbumsData = testBundle.decode(DeezerApiGetAlbums.self, from: "Albums.json")
+            let albums = decodedAlbumsData.albums.map {Album(id: $0.id, title: $0.title, coverMedium: $0.coverMedium, coverBig: $0.coverBig, releaseDate: $0.releaseDate)}
+            completionHandler(Result.success(albums))
+        }
     }
 }
 
@@ -100,5 +117,15 @@ class AlbumsViewControllerMock: AlbumsViewControllerProtocol {
     func navigateToAlbum(album: Album) {
         navigateToAlbumCalled = true
         receivedAlbumId = album.id
+    }
+    
+    var displayErrorMessageCalled = false
+    func displayErrorMessage(_ message: String) {
+        let expectation = expectations.first {$0.description == errorDisplayedExpectationDescription}
+        guard let foundExpectation = expectation else {
+            return
+        }
+        displayErrorMessageCalled = true
+        foundExpectation.fulfill()
     }
 }

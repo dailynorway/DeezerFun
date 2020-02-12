@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  DeezerFun
+
+  Created by Erick Vavretchek on 12/2/20.
+  Copyright © 2020 Erick Vavretchek. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Deezer Fun";

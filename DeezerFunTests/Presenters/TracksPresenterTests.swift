@@ -7,9 +7,10 @@
 //
 
 import XCTest
-@testable import DeezerFun
+@testable import Deezer_Fun
 
 fileprivate let loadingTracksExpectationDescription = "Loading Tracks Expectation"
+fileprivate let errorDisplayedExpectationDescription = "Error Displayed Expectation"
 
 class TracksPresenterTests: XCTestCase {
 
@@ -49,16 +50,30 @@ class TracksPresenterTests: XCTestCase {
         XCTAssert(viewController.receivedAlbumTitle == "Scenes From a Memory", "Must receive album Scenes From a Memory")
         XCTAssert(viewController.receivedTrackTitle == "Aerodynamic", "Must receive album Scenes From a Memory")
     }
+    
+    func testFailToFetchData() {
+        httpClient.shouldFailRequest = true
+        presenter.viewDidLoad()
+        let errorDisplayedExpectation = self.expectation(description: errorDisplayedExpectationDescription)
+        viewController.expectations.append(errorDisplayedExpectation)
+        wait(for: [errorDisplayedExpectation], timeout: 1)
+        XCTAssert(viewController.displayErrorMessageCalled, "An error message must be displayed when network request fails")
+    }
 }
 
 fileprivate class HttpClientMock: HttpClient {
     let testBundle: Bundle
+    var shouldFailRequest = false
     init(testBundle: Bundle) { self.testBundle = testBundle }
     override func sendRequest(router: DeezerApiClient.Router, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         switch router {
         case .getTracks:
-            let data = testBundle.dataFromFile("Tracks.json")
-            completionHandler(data, nil, nil)
+            if shouldFailRequest {
+                completionHandler(nil, nil, DeezerApiError.dataNotReceived)
+            } else {
+                let data = testBundle.dataFromFile("Tracks.json")
+                completionHandler(data, nil, nil)
+            }
         default:
             break
         }
@@ -105,5 +120,15 @@ class TracksViewControllerMock: TracksViewControllerProtocol {
         displayPlayerControllerCalled = true
         receivedAlbumTitle = album.title
         receivedTrackTitle = track.title
+    }
+    
+    var displayErrorMessageCalled = false
+    func displayErrorMessage(_ message: String) {
+        let expectation = expectations.first {$0.description == errorDisplayedExpectationDescription}
+        guard let foundExpectation = expectation else {
+            return
+        }
+        displayErrorMessageCalled = true
+        foundExpectation.fulfill()
     }
 }

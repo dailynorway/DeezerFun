@@ -14,6 +14,7 @@ protocol SearchViewControllerProtocol: class {
     func startLoading()
     func stopLoading()
     func navigateToAlbums(for artist: Artist)
+    func displayErrorMessage(_ messsage: String)
 }
 
 class SearchPresenter {
@@ -40,7 +41,7 @@ class SearchPresenter {
     
     // MARK: Requests
     func searchArtistRequest(with artistText: String) {
-        if artistText.count < 3 {
+        if artistText.count < 2 {
             dataSource.artists = []
             viewController.toggleEmptyStateImage()
             viewController.refreshTable()
@@ -64,7 +65,9 @@ class SearchPresenter {
                         self?.viewController.refreshTable()
                     }
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.viewController.displayErrorMessage(error.localizedDescription)
+                    }
                 }
             }
         })
