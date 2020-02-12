@@ -36,7 +36,11 @@ class DeezerApiClientTracksTests: XCTestCase {
         httpClient.errorSimulationType = .dataNotReceived
         client.getTracks(123) { result in
             if case let Result.failure(error) = result {
-                XCTAssert(error.localizedDescription == "API did not return data", "We must receive a Data Not received error")
+                var validConditionMet = false
+                if case DeezerApiError.dataNotReceived = error {
+                    validConditionMet = true
+                }
+                XCTAssert(validConditionMet, "We must receive Data not received error")
                 return
             }
             XCTFail()
@@ -47,7 +51,11 @@ class DeezerApiClientTracksTests: XCTestCase {
         httpClient.errorSimulationType = .urlSessionError
         client.getTracks(123) { result in
             if case let Result.failure(error) = result {
-                XCTAssert(error.localizedDescription == "The operation couldn’t be completed. (NSURLErrorDomain error -1000.)", "We must receive a Data Not received error")
+                var validConditionMet = false
+                if case DeezerApiError.urlSession = error {
+                    validConditionMet = true
+                }
+                XCTAssert(validConditionMet, "We must receive URL Session error")
                 return
             }
             XCTFail()
@@ -58,7 +66,11 @@ class DeezerApiClientTracksTests: XCTestCase {
         httpClient.errorSimulationType = .decodingError
         client.getTracks(123) { result in
             if case let Result.failure(error) = result {
-                XCTAssert(error.localizedDescription == "The data couldn’t be read because it is missing.", "We must receive Decoding missing error")
+                var validConditionMet = false
+                if case DeezerApiError.decoding = error {
+                    validConditionMet = true
+                }
+                XCTAssert(validConditionMet, "We must receive Decoding missing error")
                 return
             }
             XCTFail()
